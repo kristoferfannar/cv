@@ -1,3 +1,5 @@
+
+
 # CV
 
 Welcome to my CV repo. In attempt to move away from overleaf, I've decided to move my cv to my file system, while version controlling it on GitHub.
@@ -37,6 +39,8 @@ brew install --cask sioyek
 The auto-reload feature of Sioyek is super nice, and the setup (so far) more or less identically resembles overleaf.
 Only in the comfort of my editor.
 
-Here's a video of me showcasing my setup:
+Here's a short video of me showcasing my setup:
 
-![setup video](./setup.mp4)
+
+https://github.com/user-attachments/assets/699affc5-fdc0-424e-8aa6-b1ef31a3ff1e
+
