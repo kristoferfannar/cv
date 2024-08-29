@@ -17,3 +17,8 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: main.tex
+
+      - name: ls -Al
+        run: |
+          ls -Al
+
