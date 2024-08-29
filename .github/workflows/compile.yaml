@@ -8,7 +8,8 @@ on:
 
 jobs:
   hello_world:
-    name: Hello world
     runs-on: macOS
     steps:
-      - run: echo "Hello world"
+      - name: Hello world
+        run: |
+          echo "Hello world"
