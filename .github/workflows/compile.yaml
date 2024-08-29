@@ -10,6 +10,10 @@ jobs:
   hello_world:
     runs-on: macos-latest
     steps:
-      - name: Hello world
-        run: |
-          echo "Hello world"
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
