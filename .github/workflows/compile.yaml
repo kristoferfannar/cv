@@ -1,0 +1,13 @@
+name: Compile LaTeX to PDF
+on:
+  push:
+    paths:
+      - '**.tex'
+
+
+jobs:
+  hello_world:
+    name: Hello world
+    runs-on: macOS
+    steps:
+      - run: echo "Hello world"
