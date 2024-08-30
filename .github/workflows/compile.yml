@@ -45,11 +45,12 @@ jobs:
                     <style>
                         body {
                             height: 100vh;
+                            margin: 0;
                         }
                     </style>
                   </head>
                   <body>
-                    <object data='main.pdf' type="application/pdf" width="100%" height="100vh">
+                    <object data='main.pdf' type="application/pdf" width="100%" height="100%">
                       <p>Unable to display PDF file. <a href='main.pdf'>Download</a> instead.</p>
                     </object>
                   </body>
