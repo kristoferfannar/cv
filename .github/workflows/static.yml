@@ -22,6 +22,19 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  create_html:
+    run: |
+      mkdir dist
+      echo "<!DOCTYPE html>
+            <html>
+              <head>
+                <title>Title of the document</title>
+              </head>
+              <body>
+                <h1>PDF Example</h1>
+              </body>
+            </html>" > dist/index.html
+
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -37,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: 'dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
