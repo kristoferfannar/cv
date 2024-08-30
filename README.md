@@ -1,10 +1,11 @@
-
-
 # CV
 
-Welcome to my CV repo. In attempt to move away from overleaf, I've decided to move my cv to my file system, while version controlling it on GitHub.
+Welcome to my CV repo!
 
-This allows for keeping track of incremental changes, autocompiling it and having a workflow continuously deploy it once I have somewhere to continuously deploy.
+My current CV can be found on [kristoferfannar.github.io/cv](https://kristoferfannar.github.io/cv)
+
+In attempt to move away from overleaf, I've decided to move my cv to my file system, while version controlling it on GitHub.
+This allows for keeping track of incremental changes, autocompiling it and having a workflow continuously deploy it on GitHub Pages.
 
 ## Setup
 
@@ -41,6 +42,4 @@ Only in the comfort of my editor.
 
 Here's a short video of me showcasing my setup:
 
-
 https://github.com/user-attachments/assets/699affc5-fdc0-424e-8aa6-b1ef31a3ff1e
-
