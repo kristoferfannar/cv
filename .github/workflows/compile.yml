@@ -33,7 +33,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          pre_compile: "export TEXMFHOME=$(pwd)/latex-packages/ && echo $TEXMFHOME && mktexlsr $TEXMFHOME && kpsewhich uplb8a.pfb"
+          pre_compile: "export TEXMFHOME=$(pwd)/latex-packages/ && mktexlsr $TEXMFHOME"
           root_file: main.tex
 
       - name: create index.html
