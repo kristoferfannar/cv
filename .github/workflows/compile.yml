@@ -29,13 +29,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: |
-          echo "hello world"
-          tlmgr conf
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          pre_compile: "tlmgr conf"
           root_file: main.tex
 
       - name: create index.html
