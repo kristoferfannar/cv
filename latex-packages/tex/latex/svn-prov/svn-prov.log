@@ -1,0 +1,89 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.7.25)  10 SEP 2024 02:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**svn-prov.ins
+(./svn-prov.ins
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count188
+\emptyLines=\count189
+\processedLines=\count190
+\commentsRemoved=\count191
+\commentsPassed=\count192
+\codeLinesPassed=\count193
+\TotalprocessedLines=\count194
+\TotalcommentsRemoved=\count195
+\TotalcommentsPassed=\count196
+\TotalcodeLinesPassed=\count197
+\NumberOfFiles=\count198
+\inFile=\read2
+\inputcheck=\read3
+\off@0=\count199
+\off@1=\count266
+\off@2=\count267
+\off@3=\count268
+\off@4=\count269
+\off@5=\count270
+\off@6=\count271
+\off@7=\count272
+\off@8=\count273
+\off@9=\count274
+\off@10=\count275
+\off@11=\count276
+\off@12=\count277
+\off@13=\count278
+\off@14=\count279
+\off@15=\count280
+\@maxfiles=\count281
+\@maxoutfiles=\count282
+
+Utility: `docstrip' v2.6b <2022-09-03>
+English documentation    <2023-10-10>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./svn-prov.sty 
+\openout0 = `./svn-prov.sty'.
+
+
+Processing file svn-prov.dtx (package) -> svn-prov.sty
+Lines  processed: 790
+Comments removed: 510
+Comments  passed: 1
+Codelines passed: 271
+
+*************************************************************
+*                                                           *
+* To finish the installation you have to move the following *
+* file into a directory searched by TeX:                    *
+*                                                           *
+*     svn-prov.sty                                          *
+*                                                           *
+* To produce the documentation run the file svn-prov.dtx    *
+* through LaTeX.                                            *
+*                                                           *
+* Happy TeXing!                                             *
+*                                                           *
+*************************************************************
+ ) 
+Here is how much of TeX's memory you used:
+ 331 strings out of 475568
+ 3551 string characters out of 5777915
+ 1925184 words of memory out of 5000000
+ 22575 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 13i,0n,15p,235b,121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+No pages of output.
