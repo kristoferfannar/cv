@@ -69,3 +69,10 @@ latex <package>.ins
 ```
 
 Ensuring that both the `.ins` and `.dtx` files are in the same directory, this will generate the `.sty` file required by latexmk.
+
+Installing packages and fonts is all about placing them in the correct directories within the `TEXMFHOME` directory. Fonts exist using `.tfm`, `.vf`, `.fd`, `.map`, `.enc` and `.pfb` files, while most packages use the `.sty` extension. These have to be placed in the correct sub-directories within `TEXMFHOME`, for example `$TEXMFHOME/fonts/vf/`, `$TEXMFHOME/fonts/tfm/` or `$TEXMFHOME/tex/latex/`
+
+After moving a font or package to a directory, update the local LaTeX database using `mktexlsr $TEXMFHOME` or simply using `mktexlsr`.
+Then, to check whether a file is known by your local LaTeX database, use `kpsewhich <file>`. This helps a lot while installing libraries.
+
+Remember to continuously compile with a clean cache `latexmk -C` clears cache, to get good error messages for what's next.
