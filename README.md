@@ -60,7 +60,7 @@ Note that this only works while you're only locally compiling latex for this pro
 
 #### Installing external packages
 
-Installing packages is often as easy as `sudo tlmgr install <package>`, found using `tlmgr search <package>`. However, sometimes these packages aren't available to the _tlmgr_ directory, meaning that we are required to find and build the `.sty` files on our own.
+Installing packages is often as easy as `sudo tlmgr install <package>`, found using `tlmgr search <package>`. However, this will install the package in `TEXMFDIST`, which makes it hard to compile between devices. Also, sometimes these packages aren't available to the _tlmgr_ directory. This encourages us to find and build the `.sty` files manually.
 
 To do this, we require an `.ins` installer file and `.dtx` documented source file for the package - this can usually be found online. Then, to create the `.sty` file from these files, run:
 
