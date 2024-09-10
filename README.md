@@ -43,3 +43,29 @@ Only in the comfort of my editor.
 Here's a short video of me showcasing my setup:
 
 https://github.com/user-attachments/assets/699affc5-fdc0-424e-8aa6-b1ef31a3ff1e
+
+### External packages
+
+External packages are stored as `.sty` files under `tex/latex/<package>/<package>.sty` in a specific package directory.
+For _latexmk_, this package directory can be seen using `tlmgr conf` under `TEXMFHOME` for user specific directory (similar to `TEXMFLOCAL` for system directory or `TEXMFDIST` for distribution wide packages).
+
+For this project, the package directory is [`./latex-packages/`](./latex-packages/), so you'll have to set the environment variable manually:
+
+```bash
+# for zsh
+echo "export TEXMFHOME=$(pwd)/latex-packages" >> ~/.zshrc && source ~/.zshrc
+```
+
+Note that this only works while you're only locally compiling latex for this project. If you're locally compiling latex for other projects, you'll need to use the original `TEXMFHOME`, storing the external libraries used here in a separate file and using a script to ensure they're installed.
+
+#### Installing external packages
+
+Installing packages is often as easy as `sudo tlmgr install <package>`, found using `tlmgr search <package>`. However, sometimes these packages aren't available to the _tlmgr_ directory, meaning that we are required to find and build the `.sty` files on our own.
+
+To do this, we require an `.ins` installer file and `.dtx` documented source file for the package - this can usually be found online. Then, to create the `.sty` file from these files, run:
+
+```
+latex <package>.ins
+```
+
+Ensuring that both the `.ins` and `.dtx` files are in the same directory, this will generate the `.sty` file required by latexmk.
