@@ -29,6 +29,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: |
+          echo "hello world"
+          tlmgr conf
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
