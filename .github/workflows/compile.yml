@@ -33,7 +33,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          pre_compile: "tlmgr conf"
+          pre_compile: "kpsewhich geometry.sty"
           root_file: main.tex
 
       - name: create index.html
