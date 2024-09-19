@@ -48,7 +48,7 @@
 % Hyperlink setup (moved after fancyhdr to address warning)
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
-    colorlinks=true,
+    colorlinks=false,
     linkcolor=darkblue,
     filecolor=darkblue,
     urlcolor=darkblue,
@@ -193,54 +193,53 @@
 % Seeking a challenging position in [your field] to leverage my expertise in [your key skills]. Aiming to contribute to innovative projects at the intersection of [your interests] and practical problem-solving in fields such as [specific areas of interest].
 % }
 % \vspace{-2mm}
-%
-%
-%
+
+
+
 \section{\textbf{Experience}}
 \vspace{-0.4mm}
   \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Reykjavik University [\href{https://www.ru.is}{\faIcon{globe}}]}{Reykjavik, IS}
+  {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
     {Teaching Assistant | Algorithms - Web Programming - Computer Networks}{Aug 2023 - Current}
     \resumeItemListStart
-      \item Have been a TA for 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks now in Fall 2024.
-	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams.
+      \item Have been a TA for 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks now in Fall 2024
+	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams
     \resumeItemListEnd
 
   \resumeSubheading
-      {{Keystrike [\href{https://keystrike.com}{\faIcon{globe}}]}}{Kopavogur, IS}
+      {\href{https://keystrike.com}{Keystrike}}{Kopavogur, IS}
 	  {Intern Software Developer}{May 2024 - Aug 2024}
       \resumeItemListStart
-	    \item Expanded the Keystrike Desktop Client, used for creating cryptographic attestations for typed user input, to macOS from heavily windows coupled codebase.
+	    \item Expanded the Keystrike Desktop Client, used for creating cryptographic attestations for typed user input, to macOS from heavily windows coupled Rust codebase
 
-		\item Restructured Rust codebase towards platform independence with new bindings for macOS API.
+		% \item Restructured Rust codebase towards platform independence with new bindings for macOS API
 
-		% \item Main developer alongside another intern from project's inception to external beta testing.
+		% \item Main developer alongside another intern from project's inception to external beta testing
 
-		\item Developed using high security standards for storing secrets, preventing injected inputs \& signing input attestations as the product serves to protect critical infrastructure.
+		\item Developed using high security standards for storing secrets, preventing injected inputs \& signing input attestations as the product serves to protect critical infrastructure
 
-		\item Bundled, signed and notarized app for direct distribution for macOS devices through GitHub Actions. 
+		\item Bundled, signed and notarized app for direct distribution for macOS devices through GitHub Actions 
       \resumeItemListEnd 
 
   \resumeSubheading
-    {Syndis [\href{https://www.syndis.is}{\faIcon{globe}}]}{Reykjavik, IS}
+    {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Intern Software Developer}{May 2023 - Jan 2024}
     \resumeItemListStart
-		\item Designed and created a working prototype for \emph{bcp.online} [\href{https://bcp.online}{\faIcon{globe}}].
+\item Designed and created a working prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting 
+			multi-user multi-role organizations using playbooks, roles, trainings and incident handling
 
-	  \item Redesigned the BCP onboarding process utilizing software, shortening it from weeks to hours.
-
-	  \item Created platform supporting multi-user multi-role organizations using playbooks, roles, trainings and incident handling.
+	  \item Redesigned the BCP onboarding process utilizing software, shortening it from weeks to hours
     \resumeItemListEnd
 	
   % \resumeSubheading
   % {Marine \& Freshwater Research Institute [\href{https://hafogvatn.is}{\faIcon{globe}}]}{Hafnarfjordur, IS}
   %   {Intern Software Developer}{May 2022 - Jan 2023}
   %   \resumeItemListStart
-	 %  \item Created a web service for collecting and persisting data from fish passing through graders in Icelandic fisheries. 
+	 %  \item Created a web service for collecting and persisting data from fish passing through graders in Icelandic fisheries 
   %
-	 %  \item Programmed API to handle different grader protocols, creating private endpoints for fetching data.
+	 %  \item Programmed API to handle different grader protocols, creating private endpoints for fetching data
   %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -282,17 +281,6 @@
 \section{\textbf{Projects}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
-%
-\resumeProject
-  {BS Project w/ Keystrike}
-  {Tools: [List of tools and technologies used]}
-  {Oct 2023 - May 2024}
-  {{}[\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{\textcolor{darkblue}{\faFile}}]}
-\resumeItemListStart
-  \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web.
-
-  \item Implemented and compared existing and new approaches of string comparisons to determine whether a raw sequence of typed characters with edits could make a final edited string.
-\resumeItemListEnd
 
 \resumeProject
   {PremKing}
@@ -300,9 +288,20 @@
   {July 2023 - Current}
   {\socialicon{\faGithub} \href{https://github.com/kristo-og-logi/premking}{premking}}
 \resumeItemListStart
-  \item Created a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
+  % \item Created a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
   \item Supported users to create accounts, join private leagues and place virtual bets on Premier League gameweek fixtures
-  \item Implemented cronjobs to fetch live fixture data, updating player scores and updating odds on future gameweek fixtures
+  % \item Implemented cronjobs to fetch live fixture data, updating player scores and updating odds on future gameweek fixtures
+\resumeItemListEnd
+
+\resumeProject
+  {BS Project w/ Keystrike}
+  {Tools: [List of tools and technologies used]}
+  {Oct 2023 - May 2024}
+  {{}[\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{\textcolor{black}{\faFile}}]}
+\resumeItemListStart
+  % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
+
+  \item Developed string comparison algorithms to determine whether a sequence of typed characters could make an edited string with $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
 % \resumeProject 
@@ -316,24 +315,19 @@
 
 \resumeSubHeadingListEnd
 
-% \section{\textbf{Skills}}
-% \vspace{-0.4mm}
-%  \resumeHeadingSkillStart
-%   \resumeSubItem{Programming Languages:}
-%     {Language 1, Language 2, Language 3, Language 4, Language 5}
-%   \resumeSubItem{Web Technologies:}
-%     {Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
-%   \resumeSubItem{Database Systems:}
-%     {Database 1, Database 2, Database 3}
-%   \resumeSubItem{Data Science \& Machine Learning:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
-%   \resumeSubItem{Cloud Technologies:}
-%     {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
-%   \resumeSubItem{DevOps \& Version Control:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-%  \resumeHeadingSkillEnd
+\vspace{-5mm}
+\section{\textbf{Skills}}
+ \resumeHeadingSkillStart
+ \resumeSubItem{Languages \& frameworks| }
+    {Python, Javascript, Go, Rust, Java, C++, React, Nextjs, Echo, SQL}
 
-\vspace{-4.4mm}
+	\resumeSubItem{DevOps \& Infra| }
+    {AWS EC2, CI/CD, Apple Codesigning, Docker, Protobuf}
+
+	\resumeSubItem{Interests}
+	{Systems, Cybersecurity, Competitive Programming}
+ \resumeHeadingSkillEnd
+
 \section{\textbf{Honors and Awards}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
@@ -343,7 +337,7 @@
   {Reykjavik University}
   {Fall 2023 \& Fall 2024}
   {}
-  % {{}[\href{https://award-link-a.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+  % {{}[\href{https://award-link-a.com}{\textcolor{black}{\faIcon{globe}}}]}
 % \resumeItemListStart
 %   \item Impact or recognition associated with the award
 % \resumeItemListEnd
@@ -352,7 +346,7 @@
   {Freshman grant}
   {Reykjavik University}
   {For Fall 2021}
-  % {{}[\href{https://award-link-b.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+  % {{}[\href{https://award-link-b.com}{\textcolor{black}{\faIcon{globe}}}]}
 % \resumeItemListStart
 %   \item Brief description of the award and its significance
 %   \item Impact or recognition associated with the award
@@ -362,111 +356,11 @@
 \resumeProject
   {National Gymnasium Math Competition}
   {Icelandic Mathematical Society (ice. Íslenska Stærðfræðifélagið)}
-  {2nd | 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{darkblue}{\faIcon{globe}}}]}
-  {\textit{16th - 17th | 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{darkblue}{\faIcon{globe}}}]}}
+  {2nd | 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{black}{\faIcon{globe}}}]}
+  {\textit{16th - 17th | 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{black}{\faIcon{globe}}}]}}
 
 \resumeSubHeadingListEnd
-%
-% \vspace{-6mm}
-% \section{\textbf{Leadership Experience}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumeProject
-%   {Leadership Role A}
-%   {Organization/Institution Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or achievement in this role
-%   \item Quantifiable impact or improvement made during tenure
-%   \item Initiative taken or project led
-% \resumeItemListEnd
-%
-% \resumeProject
-%   {Leadership Role B}
-%   {Organization/Institution Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or achievement in this role
-%   \item Quantifiable impact or improvement made during tenure
-%   \item Initiative taken or project led
-% \resumeItemListEnd
-%
-% \resumeSubHeadingListEnd
-%
-% \vspace{-6mm}
-%
-% \section{\textbf{Volunteer Experience}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumeProject
-%   {Volunteer Role A}
-%   {Organization Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or contribution in this role
-%   \item Impact of your volunteer work
-%   \item Skills developed or applied during this experience
-% \resumeItemListEnd
-%
-% \resumeProject
-%   {Volunteer Role B}
-%   {Organization Name}
-%   {Month Year - Present}
-%   {{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or contribution in this role
-%   \item Impact of your volunteer work
-%   \item Skills developed or applied during this experience
-% \resumeItemListEnd
-%
-% \resumeSubHeadingListEnd
-% \vspace{-6mm}
-%
-% \section{\textbf{Professional Memberships}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumePOR{Professional Organization A}
-%     {, Membership ID: XXXXXXXX}
-%     {Month Year - Present}
-% \resumePOR{Professional Organization B}
-%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
-%     {Month Year - Present}
-% \resumePOR{Professional Organization C}
-%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
-%     {Month Year - Present}
-%
-% \resumeSubHeadingListEnd
-% \vspace{-6mm}
-%
-% \section{\textbf{Certifications}}
-% \vspace{-0.2mm}
-% \resumeSubHeadingListStart
-% \resumePOR{}{\href{https://certification-link-a.com}{
-% \textbf{Certification A}
-% }}{Month Year}
-% \resumePOR{}{
-% \textbf{Certifying Body:} {{\href{https://certification-link-b.com}{Certification B}}}}{Month Year}
-% \resumePOR{}{
-% \textbf{Certifying Body:} {{\href{https://certification-link-c.com}{Certification C}}}}{Month Year}
-% \resumePOR{}{\href{https://certification-link-d.com}{
-% \textbf{Certification D}
-% }}{Month Year}
-%
-% \resumeSubHeadingListEnd
-% \vspace{-6mm}
-%
-% \section{\textbf{Additional Information}}
-% \vspace{-0.4mm}
-% \small{
-% \textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
-%
-% \textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
-% }
-% \vspace{-4mm}
-%
+
 %
 % \section{\textbf{References}}
 % \vspace{-0.2mm}
