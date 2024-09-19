@@ -9,7 +9,7 @@
 %
 
 \documentclass{article}
-\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[letterpaper]{geometry}
 
 % % Package imports
 \usepackage{latexsym}
@@ -42,7 +42,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\geometry{left=1.4cm, top=1.2cm, right=1.2cm, bottom=1.2cm}
 \setlength{\footskip}{5pt} % Addressing fancyhdr warning
 
 % Hyperlink setup (moved after fancyhdr to address warning)
@@ -99,7 +99,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
+\vspace{0.5mm}
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
@@ -108,7 +108,7 @@
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
+\vspace{0.5mm}
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#3}} \\
         \footnotesize{\textit{#2}} & \footnotesize{#4}
@@ -121,11 +121,11 @@
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\cvsection}[1]{%
@@ -142,7 +142,6 @@
 
 % Commands for icon sizing and positioning
 \newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
-\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
 
 % Font options
 \newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
@@ -204,7 +203,7 @@
   {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
     {Teaching Assistant | Algorithms - Web Programming - Computer Networks}{Aug 2023 - Current}
     \resumeItemListStart
-      \item Have been a TA for 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks now in Fall 2024
+      \item TA'd 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks now in Fall 2024
 	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams
     \resumeItemListEnd
 
@@ -212,25 +211,25 @@
       {\href{https://keystrike.com}{Keystrike}}{Kopavogur, IS}
 	  {Intern Software Developer}{May 2024 - Aug 2024}
       \resumeItemListStart
-	    \item Expanded the Keystrike Desktop Client, used for creating cryptographic attestations for typed user input, to macOS from heavily windows coupled Rust codebase
+	    \item Expanded the Keystrike Desktop Client, used for generating cryptographic attestations for typed user input, to macOS from windows coupled Rust codebase
 
 		% \item Restructured Rust codebase towards platform independence with new bindings for macOS API
 
 		% \item Main developer alongside another intern from project's inception to external beta testing
 
-		\item Developed using high security standards for storing secrets, preventing injected inputs \& signing input attestations as the product serves to protect critical infrastructure
+		\item Developed using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations as product serves to protect critical infrastructure
 
-		\item Bundled, signed and notarized app for direct distribution for macOS devices through GitHub Actions 
+		\item Bundled, signed and notarized app for direct distribution for macOS devices automacitally through GitHub Actions 
       \resumeItemListEnd 
 
   \resumeSubheading
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Intern Software Developer}{May 2023 - Jan 2024}
     \resumeItemListStart
-\item Designed and created a working prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting 
+      \item Designed and developed a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}} in React and Express with a dockerized Postgres database, supporting 
 			multi-user multi-role organizations using playbooks, roles, trainings and incident handling
 
-	  \item Redesigned the BCP onboarding process utilizing software, shortening it from weeks to hours
+	  \item Conducted interviews with prospective clients to shape a redesigned BCP onboarding process utilizing software, shortening it from weeks to hours
     \resumeItemListEnd
 	
   % \resumeSubheading
@@ -243,7 +242,7 @@
   %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-\vspace{-6mm}
+\vspace{-4mm}
 
 \section{\textbf{Education}}
 \vspace{-0.4mm}
@@ -260,11 +259,11 @@
 {Reykjavik University}{Reykjavik, IS}
 {BS Software Engineering}{Aug 2021 - May 2024}
 \resumeItemListStart
-\vspace{1.0mm}
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-	\textit{\footnotesize{Exchange semester @ University of Copenhagen}} &  \textit{\footnotesize{Spring 2023}}\\
-    \end{tabular*}
-\item Grade: 9.35 / 10
+% \vspace{1.0mm}
+ %    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	% \textit{\footnotesize{Exchange semester @ University of Copenhagen}} &  \textit{\footnotesize{Spring 2023}}\\
+ %    \end{tabular*} \newline
+    \item Grade: 9.35 / 10
 	% \emph{Exchange semester at University of Copenhagen} \hfill \emph{\small{Feb 2023 - June 2023}}
 \resumeItemListEnd
 
@@ -276,7 +275,7 @@
 % \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-6mm}
+\vspace{-4mm}
 
 \section{\textbf{Projects}}
 \vspace{-0.4mm}
@@ -284,11 +283,11 @@
 
 \resumeProject
   {PremKing}
-  {Skills: React Native, Expo, Go, AWS EC2, OAuth, External API, Postgres, App Store}
+  {Skills: React Native, Expo, Go, AWS EC2, OAuth, External API, Postgres, App Store \& Testflight}
   {July 2023 - Current}
   {\socialicon{\faGithub} \href{https://github.com/kristo-og-logi/premking}{premking}}
 \resumeItemListStart
-  % \item Created a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
+  % \item Developed a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
   \item Supported users to create accounts, join private leagues and place virtual bets on Premier League gameweek fixtures
   % \item Implemented cronjobs to fetch live fixture data, updating player scores and updating odds on future gameweek fixtures
 \resumeItemListEnd
@@ -315,7 +314,7 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-5mm}
+\vspace{-4mm}
 \section{\textbf{Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages \& frameworks| }
@@ -341,6 +340,7 @@
 % \resumeItemListStart
 %   \item Impact or recognition associated with the award
 % \resumeItemListEnd
+\vspace{3mm}
 
 \resumeProject
   {Freshman grant}
@@ -352,6 +352,7 @@
 %   \item Impact or recognition associated with the award
 % \resumeItemListEnd
 
+\vspace{3mm}
 
 \resumeProject
   {National Gymnasium Math Competition}
