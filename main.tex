@@ -101,7 +101,7 @@
 \newcommand{\resumeSubheading}[4]{
 \vspace{0.5mm}
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
+		\textbf{\normalsize{#1}} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
     \end{tabular*}
     \vspace{-2.4mm}
@@ -123,7 +123,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
@@ -201,9 +201,9 @@
 
   \resumeSubheading
   {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
-    {Teaching Assistant | Algorithms - Web Programming - Computer Networks}{Aug 2023 - Current}
+    {Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Current}
     \resumeItemListStart
-      \item TA'd 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks now in Fall 2024
+      \item TA'd 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks in Fall 2024
 	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams
     \resumeItemListEnd
 
@@ -226,7 +226,7 @@
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Intern Software Developer}{May 2023 - Jan 2024}
     \resumeItemListStart
-\item Designed and developed a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}} in React and Express with a \emph{dockerized} Postgres database, supporting 
+\item Worked alongside team to design and develope a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting 
 			multi-user multi-role organizations using playbooks, roles, trainings and incident handling
 
 	  \item Conducted interviews with prospective clients to shape a redesigned BCP onboarding process utilizing software, shortening it from weeks to hours
@@ -250,22 +250,25 @@
 
 \resumeSubheading
 {Columbia University}{New York, NY}
-{MS Computer Science | Software Systems}{Aug 2024 - Exp Dec 2025}
-\resumeItemListStart
-\item GPA: N/A /4.00
-\resumeItemListEnd
+{MS Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
+% \resumeItemListStart
+% \item GPA: N/A /4.00
+% \resumeItemListEnd
 
+\vspace{4mm}
 \resumeSubheading
 {Reykjavik University}{Reykjavik, IS}
-{BS Software Engineering}{Aug 2021 - May 2024}
-\resumeItemListStart
+{BS Software Engineering $\cdot$ Grade 9.35 / 10}{Aug 2021 - May 2024}
+% \resumeItemListStart
 % \vspace{1.0mm}
  %    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 	% \textit{\footnotesize{Exchange semester @ University of Copenhagen}} &  \textit{\footnotesize{Spring 2023}}\\
  %    \end{tabular*} \newline
-    \item Grade: 9.35 / 10
+    % \item Grade: 9.35 / 10
 	% \emph{Exchange semester at University of Copenhagen} \hfill \emph{\small{Feb 2023 - June 2023}}
-\resumeItemListEnd
+% \resumeItemListEnd
+
+
 
 % \resumeSubheading
 % {Commercial College of Iceland}{Reykjavik, IS}
@@ -275,7 +278,7 @@
 % \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-4mm}
+\vspace{-1mm}
 
 \section{\textbf{Projects}}
 \vspace{-0.4mm}
@@ -283,7 +286,7 @@
 
 \resumeProject
   {PremKing}
-  {Skills: React Native, Expo, Go, AWS EC2, OAuth, External API, Postgres, App Store \& Testflight}
+  {Skills: React Native $\cdot$ Expo $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ External API $\cdot$ Postgres $\cdot$ App Store \& Testflight}
   {July 2023 - Current}
   {\socialicon{\faGithub} \href{https://github.com/kristo-og-logi/premking}{premking}}
 \resumeItemListStart
@@ -294,13 +297,13 @@
 
 \resumeProject
   {BS Project w/ Keystrike}
-  {Tools: [List of tools and technologies used]}
+  {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
   {Oct 2023 - May 2024}
   {{}[\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{\textcolor{black}{\faFile}}]}
 \resumeItemListStart
   % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 
-  \item Developed string comparison algorithms to determine whether a sequence of typed characters could make an edited string with $\ge 80\%$ confidence on average
+  \item Worked in a group to develop string comparison algorithms to determine whether a sequence of typed characters could produce an edited string with $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
 % \resumeProject 
@@ -318,13 +321,13 @@
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages \& frameworks| }
-    {Python, Javascript, Go, Rust, Java, C++, React, Nextjs, Echo, SQL, Bash}
+    {Python $\cdot$ Typescript $\cdot$ Go $\cdot$ Rust $\cdot$ Java $\cdot$ C++ $\cdot$ React $\cdot$ Nextjs $\cdot$ SQL $\cdot$ Bash}
 
 	\resumeSubItem{DevOps \& Infra| }
-    {AWS EC2, CI/CD, GitHub, Apple Codesigning, Docker, Protobuf}
+    {AWS EC2 $\cdot$ CI/CD $\cdot$ GitHub $\cdot$ Apple Codesigning $\cdot$ Docker $\cdot$ Protobuf}
 
-	\resumeSubItem{Interests}
-	{Systems, Cybersecurity, Competitive Programming, Data Structures \& Algorithms}
+	\resumeSubItem{Interests| }
+	{Systems $\cdot$ Cybersecurity $\cdot$ Competitive Programming $\cdot$ Data Structures \& Algorithms $\cdot$ CTFs}
  \resumeHeadingSkillEnd
 
  \vspace{-2mm}
@@ -337,21 +340,12 @@
   {Reykjavik University}
   {Fall 2023 \& Fall 2024}
   {}
-  % {{}[\href{https://award-link-a.com}{\textcolor{black}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Impact or recognition associated with the award
-% \resumeItemListEnd
 \vspace{3mm}
 
 \resumeProject
   {Freshman grant}
   {Reykjavik University}
   {For Fall 2021}
-  % {{}[\href{https://award-link-b.com}{\textcolor{black}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Brief description of the award and its significance
-%   \item Impact or recognition associated with the award
-% \resumeItemListEnd
 
 \vspace{3mm}
 
