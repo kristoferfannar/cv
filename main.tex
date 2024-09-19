@@ -99,21 +99,21 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{\normalsize{#1}} & \textit{\footnotesize{#4}} \\
-        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+\vspace{2mm}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
+        \textit{\normalsize{#3}} &  \normalsize{#2}\\
     \end{tabular*}
-    \vspace{-2.4mm}
+    \vspace{-2mm}
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
+\vspace{2mm}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\normalsize{#3}} \\
+        \normalsize{\textit{#2}} & \normalsize{#4}
     \end{tabular*}
-    \vspace{-2.4mm}
+    \vspace{-2mm}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -122,8 +122,8 @@
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.5mm]\normalsize}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.2mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
@@ -191,21 +191,17 @@
 % \item GPA: N/A /4.00
 % \resumeItemListEnd
 
-\vspace{4mm}
 \resumeSubheading
 {Reykjavik University}{Reykjavik, IS}
 {BS Software Engineering $\cdot$ \textbf{GPA 9.35 / 10}}{Aug 2021 - May 2024}
 \resumeItemListStart
-\vspace{1.0mm}
     \item Honors: Dean's list Fall 2023 \& Fall 2024 $\cdot$ Freshmman grant Fall 2021
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-	\textit{\footnotesize{Exchange semester @ University of Copenhagen}} &  \textit{\footnotesize{Spring 2023}}
+	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
     \end{tabular*} 
 \resumeItemListEnd
 
 \vspace{-3mm}
-
-
 \section{\textbf{Professional Experience}}
 \vspace{-0.4mm}
   \resumeSubHeadingListStart
@@ -214,8 +210,7 @@
   {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
     {Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Current}
     \resumeItemListStart
-      \item TA'd 3 courses at RU: Algorithms in Fall 2023, Web Programming in Spring 2024 and Computer Networks in Fall 2024
-	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams
+	  \item Held TA sessions, graded student submissions and gave opinions on assignments and exams for Algorithms in Fall 2023, Web Programming in Spring 2024 \& Computer Networks in Fall 2024
     \resumeItemListEnd
 
   \resumeSubheading
@@ -230,14 +225,14 @@
 
 		\item Developed using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations
 
-		\item Bundled, signed and notarized app for direct distribution for macOS devices automatically through GitHub Actions 
+		\item Signed and notarized app for direct distribution for macOS devices automatically through GitHub Actions 
       \resumeItemListEnd 
 
   \resumeSubheading
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Intern Software Developer}{May 2023 - Jan 2024}
     \resumeItemListStart
-\item Worked alongside team to design and develope a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting multi-user multi-role organizations using playbooks, roles, trainings and incident handling
+\item Collaborated alongside team to design and develope a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting multi-user multi-role organizations using playbooks, roles, trainings and incident handling
 
 	  \item Conducted interviews with prospective clients to shape a redesigned BCP onboarding process utilizing software, shortening it from weeks to hours
     \resumeItemListEnd
@@ -251,9 +246,6 @@
 	 %  \item Programmed API to handle different grader protocols, creating private endpoints for fetching data
   %   \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
-\vspace{-4mm}
-
 
 
 % \resumeSubheading
@@ -265,6 +257,7 @@
 
 \resumeSubHeadingListEnd
 
+\vspace{-3mm}
 \section{\textbf{Projects}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
@@ -272,7 +265,7 @@
 \resumeProject
   {PremKing}
   {Skills: React Native $\cdot$ Expo $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ External API $\cdot$ Postgres $\cdot$ App Store \& Testflight}
-  {July 2023 - Current}
+  {Jul 2023 - Current}
   {\href{https://github.com/kristo-og-logi/premking}{\socialicon{\faGithub} premking}}
 \resumeItemListStart
   % \item Developed a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
@@ -302,7 +295,7 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-3mm}
+\vspace{-2mm}
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages \& frameworks| }
@@ -315,7 +308,7 @@
 	{Systems $\cdot$ Cybersecurity $\cdot$ Competitive Programming $\cdot$ Data Structures \& Algorithms $\cdot$ CTFs}
  \resumeHeadingSkillEnd
 
- \vspace{-2mm}
+ \vspace{-1mm}
 \section{\textbf{Honors and Awards}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
@@ -325,14 +318,12 @@
   {Reykjavik University}
   {Fall 2023 \& Fall 2024}
   {}
-\vspace{3mm}
 
 \resumeProject
   {Freshman grant}
   {Reykjavik University}
   {For Fall 2021}
 
-\vspace{3mm}
 
 \resumeProject
   {National Gymnasium Math Competition}
