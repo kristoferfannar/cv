@@ -34,12 +34,12 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           pre_compile: "export TEXMFHOME=$(pwd)/latex-packages/ && mktexlsr $TEXMFHOME"
-          root_file: main.tex
+          root_file: resume_kristofer_bjornsson.tex
 
       - name: create index.html
         run: |
           mkdir dist
-          cp out/main.pdf dist/main.pdf
+          cp out/resume_kristofer_bjornsson.pdf dist/resume_kristofer_bjornsson.pdf
           echo "<!DOCTYPE html>
                 <html>
                   <head>
@@ -52,8 +52,8 @@ jobs:
                     </style>
                   </head>
                   <body>
-                    <object data='main.pdf' type="application/pdf" width="100%" height="100%">
-                      <p>Unable to display PDF file. <a href='main.pdf'>Download</a> instead.</p>
+                    <object data='resume_kristofer_bjornsson.pdf' type="application/pdf" width="100%" height="100%">
+                      <p>Unable to display PDF file. <a href='resume_kristofer_bjornsson.pdf'>Download</a> instead.</p>
                     </object>
                   </body>
                 </html>" > dist/index.html
@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: out/main.pdf
+          path: out/resume_kristofer_bjornsson.pdf
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
