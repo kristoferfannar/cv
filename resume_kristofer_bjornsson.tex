@@ -67,7 +67,6 @@
     colframe=white,
     width=\dimexpr\textwidth\relax,
     enlarge left by=-2mm,
-    boxsep=4pt,
     arc=0pt,outer arc=0pt,
 }
 
@@ -80,8 +79,8 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-16pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -99,7 +98,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{2mm}
+\vspace{3mm}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
         \textit{\normalsize{#3}} &  \normalsize{#2}\\
@@ -108,7 +107,7 @@
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{2mm}
+\vspace{3mm}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\normalsize{#3}} \\
         \normalsize{\textit{#2}} & \normalsize{#4}
@@ -122,12 +121,12 @@
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
+\newcommand{\resumeHeadingSkillStart}{\vspace{4mm}\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.2mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-\baselineskip}}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
@@ -149,23 +148,17 @@
 \begin{center}
     {\Huge\textbf{Kristofer Fannar Bjornsson}}
 \end{center}
-\vspace{-6mm}
+\vspace{-7mm}
 
 \begin{center}
     \small{
-    +1-646-229-0496 | \href{mailto:kristofer.bjornsson@columbia.edu}{kristofer.bjornsson@columbia.edu} | 
-    \href{https://kristoferfannar.github.io}{kristoferfannar.github.io}
-    }
-\end{center}
-\vspace{-6mm}
-
-\begin{center}
-    \small{
+    \href{mailto:kristofer.bjornsson@columbia.edu}{kristofer.bjornsson@columbia.edu} | 
+    \href{https://kristoferfannar.github.io}{kristoferfannar.github.io} |
     \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/kristoferfannar/}{kristoferfannar} | 
-    \socialicon{\faGithub} \href{https://github.com/kristoferfannar}{kristoferfannar} | 
+    \socialicon{\faGithub} \href{https://github.com/kristoferfannar}{kristoferfannar}
     }
 \end{center}
-\vspace{-6mm}
+\vspace{-4mm}
 % \begin{center}
 %     \small{Your City, Your State - Your ZIP, Your Country}
 % \end{center}
@@ -180,7 +173,6 @@
 
 
 \section{\textbf{Education}}
-\vspace{-0.4mm}
 \resumeSubHeadingListStart
 
 \resumeSubheading
@@ -195,14 +187,12 @@
 {BS Software Engineering $\cdot$ \textbf{GPA 9.35 / 10}}{Aug 2021 - May 2024}
 \resumeItemListStart
     \item Honors: Dean's list Fall 2022 \& Fall 2023 $\cdot$ Freshman grant Fall 2021
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
 	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
     \end{tabular*} 
 \resumeItemListEnd
 
-\vspace{-3mm}
 \section{\textbf{Professional Experience}}
-\vspace{-0.4mm}
   \resumeSubHeadingListStart
 
   \resumeSubheading
@@ -257,9 +247,7 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-3mm}
 \section{\textbf{Projects}}
-\vspace{-0.4mm}
 \resumeSubHeadingListStart
 
 \resumeProject
@@ -295,22 +283,19 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-2mm}
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages \& frameworks| }
-    {Python $\cdot$ Typescript $\cdot$ Go $\cdot$ Rust $\cdot$ Java $\cdot$ C / C++ $\cdot$  React $\cdot$ Nextjs $\cdot$ SQL $\cdot$ Bash $\cdot$ Scikit-learn}
+    {Python $\cdot$ Typescript $\cdot$ Go $\cdot$ Rust $\cdot$ Java $\cdot$ Spring $\cdot$ C / C++ $\cdot$  React $\cdot$ Nextjs $\cdot$ SQL $\cdot$ Bash $\cdot$ Scikit-learn}
 
 	\resumeSubItem{DevOps \& Infra| }
     {AWS EC2 $\cdot$ CI/CD $\cdot$ Linux $\cdot$ GitHub $\cdot$ Figma $\cdot$ Notion $\cdot$ nmap $\cdot$ Apple Codesigning $\cdot$ macOS API $\cdot$ WireShark $\cdot$ Docker $\cdot$ REST $\cdot$ gRPC $\cdot$ TCP/IP}
 
 	\resumeSubItem{Interests| }
-	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Competitive Programming $\cdot$ Data Structures \& Algorithms $\cdot$ CTFs}
+	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Competitive Programming $\cdot$ CTFs}
  \resumeHeadingSkillEnd
 
- \vspace{-1mm}
 \section{\textbf{Honors and Awards}}
-\vspace{-0.4mm}
 \resumeSubHeadingListStart
 
 \resumeProject
