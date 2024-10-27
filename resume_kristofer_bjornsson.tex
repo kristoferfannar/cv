@@ -80,7 +80,7 @@
 % Section formatting
 \titleformat{\section}{
   \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-16pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-14pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -122,10 +122,10 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\vspace{4mm}\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.2mm]\normalsize}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-1mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-4mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-\baselineskip}}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
@@ -140,6 +140,8 @@
 \newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
 \newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
 
+
+\linespread{0.95}
 
 \begin{document}
 \headerfontiii
@@ -281,15 +283,25 @@
 %   \item Developed [specific component] for easy integration with [specific system]
 % \resumeItemListEnd
 
+\resumeProject
+	{Raft}
+	{Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Profobuf}
+	{April 2024}
+	{\socialicon{\faGithub} \href{https://github.com/lsig/raft}{repo}}
+\resumeItemListStart
+	\item Developed the \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang
+	\item Verified consistent logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages \& frameworks| }
-    {Python $\cdot$ Typescript $\cdot$ Go $\cdot$ Rust $\cdot$ Java $\cdot$ Spring $\cdot$ C / C++ $\cdot$  React $\cdot$ Nextjs $\cdot$ SQL $\cdot$ Bash $\cdot$ Scikit-learn}
+    {Python $\cdot$ Typescript $\cdot$ Go $\cdot$ Rust $\cdot$ Java $\cdot$ Spring $\cdot$ C / C++ $\cdot$  React $\cdot$ Nextjs $\cdot$ SQL $\cdot$ Bash}
 
 	\resumeSubItem{DevOps \& Infra| }
-    {AWS EC2 $\cdot$ CI/CD $\cdot$ Linux $\cdot$ GitHub $\cdot$ Figma $\cdot$ Notion $\cdot$ nmap $\cdot$ Apple Codesigning $\cdot$ macOS API $\cdot$ WireShark $\cdot$ Docker $\cdot$ REST $\cdot$ gRPC $\cdot$ TCP/IP}
+    {AWS EC2 $\cdot$ CI/CD $\cdot$ Linux $\cdot$ GitHub $\cdot$ Figma $\cdot$  nmap $\cdot$ Apple Codesigning $\cdot$ macOS API $\cdot$ WireShark $\cdot$ Docker $\cdot$ REST $\cdot$ gRPC $\cdot$ TCP/IP}
 
 	\resumeSubItem{Interests| }
 	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Competitive Programming $\cdot$ CTFs}
