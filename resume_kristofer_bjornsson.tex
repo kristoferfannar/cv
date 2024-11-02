@@ -115,6 +115,14 @@
     \vspace{-2mm}
 }
 
+\newcommand{\resumeAward}[2]{
+\vspace{3mm}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\normalsize{#2}} \\
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -180,15 +188,16 @@
 \resumeSubheading
 {Columbia University}{New York, NY}
 {MS Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
-% \resumeItemListStart
-% \item GPA: N/A /4.00
-% \resumeItemListEnd
+\resumeItemListStart
+	\item ICPC Regionals participant
+\resumeItemListEnd
 
 \resumeSubheading
 {Reykjavik University}{Reykjavik, IS}
-{BS Software Engineering $\cdot$ \textbf{GPA 9.35 / 10}}{Aug 2021 - May 2024}
+{BS Software Engineering}{Aug 2021 - May 2024}
 \resumeItemListStart
-    \item Honors: Dean's list Fall 2022 \& Fall 2023 $\cdot$ Freshman grant Fall 2021
+    \item First Class with Distinction $\cdot$ Dean's list F22 \& F23 $\cdot$ Freshman grant F21
+	\item TA for Algorithms F23 $\cdot$ Web Programming S24 $\cdot$ Computer Networks F24
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
 	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
     \end{tabular*} 
@@ -197,17 +206,17 @@
 \section{\textbf{Professional Experience}}
   \resumeSubHeadingListStart
 
-  \resumeSubheading
-  {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
-    {Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Current}
-    \resumeItemListStart
-	  \item Held TA sessions, mentoring students through solving problem sets
-	  \item Evaluated student submissions and provided constructive feedback on assignments and exams
-    \resumeItemListEnd
+  % \resumeSubheading
+  % {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
+  %   {Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Current}
+  %   \resumeItemListStart
+	 %  \item Held TA sessions, mentoring students through solving problem sets
+	 %  \item Evaluated student submissions and provided constructive feedback on assignments and exams
+  %   \resumeItemListEnd
 
   \resumeSubheading
       {\href{https://keystrike.com}{Keystrike}}{Kopavogur, IS}
-	  {Intern Software Developer}{May 2024 - Aug 2024}
+	  {Software Engineer Intern}{May 2024 - Aug 2024}
       \resumeItemListStart
 	    \item Expanded the Keystrike Desktop Client, used for generating cryptographic attestations for typed user input, to macOS from windows coupled Rust codebase
 
@@ -222,21 +231,23 @@
 
   \resumeSubheading
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
-    {Intern Software Developer}{May 2023 - Jan 2024}
+    {Software Engineer Intern}{May 2023 - Jan 2024}
     \resumeItemListStart
-	  \item Led a team to design and develop a full-stack prototype for \href{https://bcp.online}{\emph{bcp.online}}, supporting multi-user multi-role functionality for organizational playbooks and incident handling
+	  \item Led a team to design and develop a full-stack prototype with React.js and Express.js for \href{https://bcp.online}{\emph{bcp.online}}, supporting multi-user multi-role functionality for organizational playbooks and incident handling
 
 	  \item Conducted client interviews to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
     \resumeItemListEnd
 	
-  % \resumeSubheading
-  % {Marine \& Freshwater Research Institute [\href{https://hafogvatn.is}{\faIcon{globe}}]}{Hafnarfjordur, IS}
-  %   {Intern Software Developer}{May 2022 - Jan 2023}
-  %   \resumeItemListStart
-	 %  \item Created a web service for collecting and persisting data from fish passing through graders in Icelandic fisheries 
-  %
-	 %  \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
-  %   \resumeItemListEnd
+  \resumeSubheading
+  {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Hafnarfjordur, IS}
+    {Software Engineer Intern}{May 2022 - Jan 2023}
+    \resumeItemListStart
+	  \item Created a web service using Java's Spring to automatically collect and persist data from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
+
+	  % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
+
+	  \item Developed a method for estimating fish origin probabilities based of catch date, vessel location and amount fished
+    \resumeItemListEnd
 
 
 
@@ -274,14 +285,15 @@
   \item Worked in a group to develop string comparison algorithms to determine whether a sequence of typed characters could produce an edited string with $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
-% \resumeProject 
-%   {Desktop Defender}
-%   {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security}
-%   {March 2023 - June 2023}
-%   {\socialicon{\faGithub} \href{https://github.com/DesktopDefender/DesktopDefender}{DesktopDefender}}
-% \resumeItemListStart
-%   \item Developed [specific component] for easy integration with [specific system]
-% \resumeItemListEnd
+\resumeProject 
+  {Desktop Defender}
+  {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
+  {March 2023 - June 2023}
+  {\socialicon{\faGithub} \href{https://github.com/DesktopDefender/DesktopDefender}{DesktopDefender}}
+\resumeItemListStart
+\item Envisioned \& developed a cross-platform desktop application for users to monitor their home network
+\item Created functionality to find router's IP on LAN, scraping unauthorized endpoints on router's admin portal to brute force known default BASIC encrypted admin credentials
+\resumeItemListEnd
 
 \resumeProject
 	{Raft}
@@ -290,7 +302,7 @@
 	{\href{https://github.com/lsig/raft}{\socialicon{\faGithub} repo}}
 \resumeItemListStart
 	\item Developed the \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang
-	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
+	\item Consistently replicating logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -307,26 +319,31 @@
 	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Competitive Programming $\cdot$ CTFs}
  \resumeHeadingSkillEnd
 
-\section{\textbf{Honors and Awards}}
+\section{\textbf{Awards}}
 \resumeSubHeadingListStart
 
-\resumeProject
-  {Dean's List}
-  {Reykjavik University}
-  {Fall 2022 \& Fall 2023}
-  {}
+% \resumeProject
+  % {Dean's List}
+  % {Reykjavik University}
+  % {Fall 2022 \& Fall 2023}
+  % {}
 
-\resumeProject
-  {Freshman grant}
-  {Reykjavik University}
-  {For Fall 2021}
+% \resumeProject
+%   {Freshman grant}
+%   {Reykjavik University}
+%   {For Fall 2021}
 
 
-\resumeProject
-  {National Gymnasium Math Competition}
-  {Icelandic Mathematical Society (ice. Íslenska Stærðfræðifélagið)}
-  {2nd | 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{black}{\faIcon{globe}}}]}
-  {\textit{16th - 17th | 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{black}{\faIcon{globe}}}]}}
+\resumeAward
+  {Icelandic National Gymnasium Math Competition}
+  % {Icelandic Mathematical Society (ice. Íslenska Stærðfræðifélagið)}
+  {2nd | 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{black}{\faIcon{globe}}}] \textit{16th - 17th | 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{black}{\faIcon{globe}}}]}}
+
+\resumeAward
+	{Icelandic National Compulsory School Math Competition}
+	% {(ice. Stærðfræðikeppni Grunnskólanema)}
+	{\textit{4th 2016 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2016/03/17/Staerdfraedikeppni-grunnskolanna-a-elsta-stigi/}{[\faGlobe]}}| \textit{4th 2017} | \textit{4th 2018 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2018/04/10/Urslit-staerdfraedikeppni-grunnskolanna-2018/}{[\faGlobe]}}}
+
 
 \resumeSubHeadingListEnd
 
