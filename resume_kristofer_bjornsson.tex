@@ -42,7 +42,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.2cm, top=1.2cm, right=1.2cm, bottom=1.2cm}
+\geometry{left=1.2cm, top=1.0cm, right=1.2cm, bottom=1.2cm}
 \setlength{\footskip}{5pt} % Addressing fancyhdr warning
 
 % Hyperlink setup (moved after fancyhdr to address warning)
@@ -110,16 +110,16 @@
 		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
         \textit{\normalsize{#3}} &  \normalsize{#2}\\
     \end{tabular*}
-    \vspace{-2mm}
+    \vspace{-2.5mm}
 }
 
-\newcommand{\resumeProject}[4]{
+\newcommand{\resumeProject}[2]{
 \vspace{3mm}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\normalsize{#3}} \\
-        \normalsize{\textit{#2}} & \normalsize{#4}
+        \textbf{#1} & \textit{\normalsize{#2}}
+        % \normalsize{\textit{#2}} & \normalsize{#4}
     \end{tabular*}
-    \vspace{-2mm}
+    \vspace{-2.5mm}
 }
 
 \newcommand{\resumeAward}[2]{
@@ -137,10 +137,10 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\vspace{4mm}\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-1mm]\normalsize}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-1.1mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-4mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-\baselineskip}}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
@@ -197,7 +197,7 @@
 {Columbia University}{New York, NY}
 {MS Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
 \resumeItemListStart
-	\item ICPC Regionals participant
+	\item ICPC GNY Regionals participant 
 \resumeItemListEnd
 
 \resumeSubheading
@@ -273,44 +273,43 @@
 
 \resumeProject
   {\href{https://github.com/kristo-og-logi/premking}{PremKing \footnotesize{\faGithub}}}
-  {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
+  % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
   {Jul 2023 -}
-  {}
 \resumeItemListStart
-  % \item Developed a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
-\item Supported users to create accounts, join private leagues and place virtual bets on Premier League \emph{gameweek} fixtures
+	\item Developed a mobile app with React Native for friends to compete for who's the best Premier League fixture guesser
+	\item Hosted Golang backend on AWS EC2 with Postgres DB, launched app on Testflight, hosting beta with tens of users
 	% \item Implemented cronjobs to fetch live fixture data, updating player scores and updating odds on future \emph{gameweek} fixtures
 \resumeItemListEnd
 
 \resumeProject
 {\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{BS Project w/ Keystrike  \footnotesize{\faFile}}}
-  {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
+  % {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
   {Oct 2023 - May 2024}
-  {}
 \resumeItemListStart
   % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 
-  \item developed string comparison algorithms to determine whether a sequence of typed characters could produce an edited string with $\ge 80\%$ confidence on average
+\item Researched new branch of authentication, determining whether a sequence of typed inputs could produce an edited string 
+\item Evaluated existing \& developed novel string comparison algorithms, reaching over $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
 \resumeProject 
 {\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
-  {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
+  % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
   {Mar 2023 - Jun 2023}
-  {}
+  % {}
 \resumeItemListStart
-\item Envisioned \& developed a cross-platform desktop application for users to monitor their home network
-\item Created functionality to find router's IP on LAN, scraping unauthorized endpoints on router's admin portal to brute force known default BASIC encrypted admin credentials
+\item Envisioned \& developed a cross-platform desktop application in Tauri for users to monitor their home network
+\item found router's IP on LAN, scraped unauthorized endpoints on admin portal to brute force known admin credentials
 \resumeItemListEnd
 
 \resumeProject
 {\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
-	{Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
+	% {Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
 	{Apr 2024}
-	{}
+	% {}
 \resumeItemListStart
-	\item Developed the \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang
-	\item Consistently replicating logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
+\item Developed the \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using channels \& locks
+	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -324,7 +323,7 @@
     {AWS EC2 $\cdot$ CI/CD $\cdot$ Linux $\cdot$ GitHub $\cdot$ Figma $\cdot$  nmap $\cdot$ Apple Codesigning $\cdot$ macOS API $\cdot$ WireShark $\cdot$ Docker $\cdot$ REST $\cdot$ gRPC $\cdot$ TCP/IP}
 
 	\resumeSubItem{Interests| }
-	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Competitive Programming $\cdot$ CTFs}
+	{Distributed Systems $\cdot$ Cybersecurity $\cdot$ Linux Kernel $\cdot$ Cryptocurrencies $\cdot$ Competitive Programming $\cdot$ CTFs}
  \resumeHeadingSkillEnd
 
 \section{\textbf{Awards}}
