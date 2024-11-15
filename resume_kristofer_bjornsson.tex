@@ -78,9 +78,16 @@
 \setlength{\tabcolsep}{0in}
 
 % Section formatting
-\titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-14pt}]
+% \titleformat{\section}{
+%   \vspace{-6pt}\scshape\raggedright\large
+% }{}{0em}{}[\color{black}\titlerule \vspace{-14pt}]
+
+\titleformat{\section}
+  {\vspace{-6pt}\scshape\raggedright\large}
+  {}{0em}
+  {\sectiontitlerule}
+  []
+\newcommand{\sectiontitlerule}[1]{#1 \hspace{0.5mm}\color{black}\titlerule \vspace{-18pt}}
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -265,10 +272,10 @@
 \resumeSubHeadingListStart
 
 \resumeProject
-  {PremKing}
+  {\href{https://github.com/kristo-og-logi/premking}{PremKing \footnotesize{\faGithub}}}
   {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
-  {Jul 2023 - Current}
-  {\href{https://github.com/kristo-og-logi/premking}{\socialicon{\faGithub} premking}}
+  {Jul 2023 -}
+  {}
 \resumeItemListStart
   % \item Developed a mobile app for friends to compete against each other for who's the best Premier League fixture guesser
 \item Supported users to create accounts, join private leagues and place virtual bets on Premier League \emph{gameweek} fixtures
@@ -276,31 +283,31 @@
 \resumeItemListEnd
 
 \resumeProject
-  {BS Project w/ Keystrike}
+{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{BS Project w/ Keystrike  \footnotesize{\faFile}}}
   {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
   {Oct 2023 - May 2024}
-  {{}\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{[\textcolor{black}{\faFile}] report}}
+  {}
 \resumeItemListStart
   % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 
-  \item Worked in a group to develop string comparison algorithms to determine whether a sequence of typed characters could produce an edited string with $\ge 80\%$ confidence on average
+  \item developed string comparison algorithms to determine whether a sequence of typed characters could produce an edited string with $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
 \resumeProject 
-  {Desktop Defender}
+{\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
   {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
   {Mar 2023 - Jun 2023}
-  {\socialicon{\faGithub} \href{https://github.com/DesktopDefender/DesktopDefender}{DesktopDefender}}
+  {}
 \resumeItemListStart
 \item Envisioned \& developed a cross-platform desktop application for users to monitor their home network
 \item Created functionality to find router's IP on LAN, scraping unauthorized endpoints on router's admin portal to brute force known default BASIC encrypted admin credentials
 \resumeItemListEnd
 
 \resumeProject
-	{Raft}
-	{Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Profobuf}
+{\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
+	{Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
 	{Apr 2024}
-	{\href{https://github.com/lsig/raft}{\socialicon{\faGithub} repo}}
+	{}
 \resumeItemListStart
 	\item Developed the \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang
 	\item Consistently replicating logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
