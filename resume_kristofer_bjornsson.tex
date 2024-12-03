@@ -226,12 +226,15 @@
       {\href{https://keystrike.com}{Keystrike}}{Kopavogur, IS}
 	  {Software Engineer Intern}{May 2024 - Aug 2024}
       \resumeItemListStart
-	    \item Expanded the Keystrike Desktop Client, used for generating cryptographic attestations for typed user input, to macOS from Windows coupled Rust codebase
+		\item Built security desktop app for macOS, utilizing privileged macOS API access for receiving and signing user input in Rust
+
+		\item Setup platform agnostic library APIs using Rust traits in Windows coupled codebase
 
 		% \item Restructured Rust codebase towards platform independence with new bindings for macOS API
 		% \item Main developer alongside another intern from project's inception to external beta testing
 		% \item Built using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations
-		\item Located, documented and resolved potential zero-day vulnerability, preventing injected inputs from being validated
+
+		\item Wrote a proof of concept for and resolved zero-day vulnerability, preventing injected inputs from being validated
 
 		\item Implemented automatic app building, signing \& deployment pipelines for seamless distribution for macOS devices through GitHub Actions 
       \resumeItemListEnd 
@@ -240,16 +243,19 @@
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Software Engineer Intern}{May 2023 - Jan 2024}
     \resumeItemListStart
-	  \item Led a team to design and implement a full-stack prototype with React.js and Express.js for \href{https://bcp.online}{\emph{bcp.online}}, supporting multi-user multi-role functionality for organizational playbooks and incident handling
+	\item Led a team to design and implement a full-stack prototype with React.js, Express.js \& PostgreSQL through Docker
 
-	  \item Conducted client interviews to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
+	\item Supported multi-user multi-role functionality with in-house authentication service using JWT tokens 
+
+	\item Conducted client interviews to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
+
     \resumeItemListEnd
 	
   \resumeSubheading
   {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Hafnarfjordur, IS}
     {Software Engineer Intern}{May 2022 - Jan 2023}
     \resumeItemListStart
-	  \item Created a web service using Java's Spring to automatically collect and persist data from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
+	  \item Created a web service using Java's Spring to automatically collect and persist data into a local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
 
 	  % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
 
@@ -275,9 +281,14 @@
   % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
   {Jul 2023 -}
 \resumeItemListStart
-	\item Developed a mobile app with React Native for friends to compete for who's the best Premier League fixture guesser
-	\item Hosted Golang backend on AWS EC2 with Postgres DB, launched app on Testflight, hosting beta with tens of users
+	% \item Developed a mobile app with React Native for friends to compete for who's the best Premier League fixture guesser
+	\item Developed an open source full-stack multi-user mobile app with React Native, hosting Go backend on AWS EC2, connecting to PostgresSQL database on Supabase, supporting user sessions through Google OAuth
+	
+	\item Utilized cronjobs to fetch data from external API, concurrently updating user scores on new responses
+
+	\item Launched app on Apple Testflight, hosting successful beta with tens of users
 	% \item Implemented cronjobs to fetch live fixture data, updating player scores and updating odds on future \emph{gameweek} fixtures
+
 \resumeItemListEnd
 
 \resumeProject
@@ -317,7 +328,7 @@
 
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
- \resumeSubItem{Languages \& frameworks| }
+ \resumeSubItem{Languages| }
     {Python $\cdot$ 
 	Go $\cdot$ 
 	Rust $\cdot$ 
@@ -331,7 +342,7 @@
 	% Spring $\cdot$ 
 	}
 
-	\resumeSubItem{DevOps \& Infra| }
+	\resumeSubItem{Infrastructure| }
     {AWS EC2 $\cdot$ 
 	CI/CD $\cdot$ 
 	Linux $\cdot$ 
