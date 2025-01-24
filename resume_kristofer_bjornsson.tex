@@ -197,6 +197,7 @@
 {Columbia University}{New York, NY}
 {MS Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
 \resumeItemListStart
+	\item GPA: 3.92
 	\item ICPC 2024 GNY Regionals participant 
 \resumeItemListEnd
 
@@ -226,9 +227,11 @@
       {\href{https://keystrike.com}{Keystrike}}{Kopavogur, IS}
 	  {Software Engineer Intern}{May 2024 - Aug 2024}
       \resumeItemListStart
-		\item Built security desktop app for macOS, utilizing privileged macOS API access for receiving and signing user input in Rust
+		\item Ported main offering, a security desktop driver, to macOS in Rust, now adopted by 1/3rd of company's customer base
 
-		\item Setup platform agnostic library APIs using Rust traits in Windows coupled codebase
+		% \item Setup platform agnostic library APIs using Rust traits in Windows coupled codebase
+
+		% \item Main developer through entire SDLC, from non macOS compiling Windows coupled codebase to external beta testing
 
 		% \item Restructured Rust codebase towards platform independence with new bindings for macOS API
 		% \item Main developer alongside another intern from project's inception to external beta testing
@@ -245,9 +248,9 @@
     \resumeItemListStart
 	\item Led a team to design and implement a full-stack prototype with React.js, Express.js \& PostgreSQL through Docker
 
-	\item Supported multi-user multi-role functionality with in-house authentication service using JWT tokens 
+	\item Supported multi-role functionality with in-house authentication service using JWT tokens 
 
-	\item Conducted client interviews to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
+	\item Conducted interviews with 5+ prospective clients to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
 
     \resumeItemListEnd
 	
@@ -282,7 +285,7 @@
   {Jul 2023 -}
 \resumeItemListStart
 	% \item Developed a mobile app with React Native for friends to compete for who's the best Premier League fixture guesser
-	\item Developed an open source full-stack multi-user mobile app with React Native, hosting Go backend on AWS EC2, connecting to PostgresSQL database on Supabase, supporting user sessions through Google OAuth
+	\item Developed an open source full-stack mobile app with React Native, hosting Go backend on AWS EC2, connecting to PostgresSQL database on Supabase, supporting user sessions through Google OAuth
 	
 	\item Utilized cronjobs to fetch data from external API, concurrently updating user scores on new responses
 
@@ -298,8 +301,8 @@
 \resumeItemListStart
   % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 
-\item Researched new branch of authentication, determining whether a sequence of typed inputs could produce an edited string 
-\item Rewrote Keystrike's core cryptographic attestation protocol in Python \& Golang with ECDSA signatures
+\item Determined whether a sequence of typed inputs could produce an edited string as a form of continuous authentication
+\item Rewrote Keystrike's core cryptographic attestation protocol in Python \& Go with ECDSA signatures
 \item Evaluated existing \& developed novel string comparison algorithms, reaching over $\ge 80\%$ confidence on average
 \resumeItemListEnd
 
@@ -309,18 +312,18 @@
   {Mar 2024 - Jun 2024}
   % {}
 \resumeItemListStart
-\item Envisioned \& built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
+\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
 \item Programmatically searched router's IP on LAN, scraping unauthorized endpoints to brute force known admin credentials
 \item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
 \resumeItemListEnd
 
 \resumeProject
 {\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
-	% {Skills: Concurrent \& Distributed Programming $\cdot$ Golang $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
+	% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
 	{Apr 2024}
 	% {}
 \resumeItemListStart
-\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
+\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Go over gRPC, using concurrent nodes in distributed network
 	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
 \resumeItemListEnd
 
@@ -331,15 +334,16 @@
  \resumeSubItem{Languages| }
     {Python $\cdot$ 
 	Go $\cdot$ 
-	Rust $\cdot$ 
-	Typescript $\cdot$ 
 	C/C++ $\cdot$  
-	Next.js $\cdot$ 
-	SQL % $\cdot$ 
-	% Bash
-	% React.js $\cdot$ 
+	Javascript $\cdot$
+	Rust $\cdot$ 
+	% Typescript $\cdot$ 
 	% Java $\cdot$ 
 	% Spring $\cdot$ 
+	% Next.js $\cdot$ 
+	Bash $\cdot$
+	SQL % $\cdot$ 
+	% React.js $\cdot$ 
 	}
 
 	\resumeSubItem{Infrastructure| }
@@ -347,7 +351,7 @@
 	CI/CD $\cdot$ 
 	Linux $\cdot$ 
 	% GitHub $\cdot$ 
-	Figma $\cdot$  
+	% Figma $\cdot$  
 	% nmap $\cdot$ 
 	% Apple Codesigning $\cdot$ 
 	% macOS API $\cdot$ 
@@ -361,6 +365,7 @@
 	\resumeSubItem{Interests| }
 	{Distributed Systems $\cdot$ 
 	Cybersecurity $\cdot$ 
+	SDLC $\cdot$
 	Operating Systems % $\cdot$ 
 	% Cryptocurrencies $\cdot$ 
 	% Competitive Programming $\cdot$ 
