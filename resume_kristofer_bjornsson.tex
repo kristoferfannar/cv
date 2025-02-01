@@ -137,7 +137,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\vspace{4mm}\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-1.1mm]\normalsize}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.6mm]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
@@ -220,13 +220,14 @@
 	  \resumeItemListStart
 		\item Ported main product, a security desktop driver, to macOS in Rust, now adopted by 1/3rd of company's customer base
 
+		% \item Created custom Rust bindings for communicating with macOS API, prototyping in Swift \& Objective C
 		% \item Main developer through entire SDLC, from non macOS compiling Windows coupled codebase to external beta testing
 
 		% \item Built using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations
 
 		\item Wrote a proof of concept for and resolved zero-day vulnerability, preventing injected inputs from being validated
 
-		\item Implemented automatic app building, signing \& deployment pipelines for seamless distribution for macOS devices through GitHub Actions 
+		\item Implemented automatic app building, signing \& deployment pipelines for seamless distribution through GitHub Actions 
 	\resumeItemListEnd 
 
   \resumeSubheading
@@ -242,11 +243,11 @@
     {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
     {Software Engineer Intern}{May 2023 - Jan 2024}
     \resumeItemListStart
-	\item Led a team to design and implement a full-stack prototype with React.js, Express.js \& PostgreSQL through Docker
+	\item Led a team to design and implement a full-stack prototype with React, Express \& PostgreSQL through Docker
 
 	\item Supported multi-role functionality with in-house authentication service using JWT tokens 
 
-	\item Conducted interviews with 5+ prospective clients to streamline BCP onboarding process utilizing software, shortening it from weeks to 1 hour
+	\item Conducted interviews with 5+ prospective clients to streamline BCP onboarding process from 2 weeks to 1 hour
 
     \resumeItemListEnd
 	
@@ -254,13 +255,12 @@
   {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
     {Software Engineer Intern}{May 2022 - Jan 2023}
     \resumeItemListStart
-	  \item Created a web service using Java's Spring to automatically collect and persist data into a local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
+	  \item Created a web service using Java's Spring framework to automatically collect and persist data into a local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
 
 	  % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
 
 	  \item Prototyped a method for estimating fish origin probabilities based off of catch date, vessel location and amount fished
-    \resumeItemListEnd
-
+	\resumeItemListEnd
 
 
 % \resumeSubheading
@@ -278,12 +278,33 @@
 \resumeProject
   {\href{https://github.com/kristo-og-logi/premking}{PremKing \footnotesize{\faGithub}}}
   % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
-  {Jul 2023 -}
+  {Jul 2023 - Current}
 \resumeItemListStart
-\item Launched full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native \& Go backend on AWS, connected to PostgresSQL database 
-	
-\item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
+	\item Launched open source full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native \& Golang backend on AWS, connected to PostgresSQL database 
+	\item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
+\resumeItemListEnd
 
+\resumeProject
+{\href{https://github.com/lmkdatabase/lmkdb}{lmkDB \footnotesize{\faGithub}}}
+  {Nov 2024 - Dec 2024}
+\resumeItemListStart
+	\item Developed GPU accelerated database using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
+\resumeItemListEnd
+
+\resumeProject
+{Shadow Page Table | Linux Kernel}
+{Nov 2024}
+\resumeItemListStart
+\item Added Linux Kernel system call for tracking \& monitoring specified process's virtual memory area ranges
+\item Monitored page table accesses in kernel, continuously updating a custom shared "shadow" page table, writable by kernel and readable from user space through \emph{remap\_pfn\_range}
+\resumeItemListEnd
+
+\resumeProject
+{Oven Scheduler | Linux Kernel}
+{Oct 2024}
+\resumeItemListStart
+	\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on multi-core on selected benchmarks 
+	\item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
 \resumeItemListEnd
 
 \resumeProject
@@ -293,68 +314,79 @@
 \resumeItemListStart
   % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 \item Evaluated existing \& developed novel string comparison algorithms to determine whether a sequence of typed inputs could produce an edited string, reaching over $\ge 80\%$ confidence on average
-\item Rewrote Keystrike's core cryptographic attestation protocol in Python \& Go with ECDSA signatures
+\item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python \& Golang with ECDSA signatures
 \resumeItemListEnd
 
 \resumeProject 
 {\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
   % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
   {Mar 2024 - Jun 2024}
-  % {}
 \resumeItemListStart
-\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
-\item Programmatically searched router's IP on LAN, scraping unauthorized endpoints to brute force known admin credentials
-\item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
+	\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
+	\item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
+	\item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
 \resumeItemListEnd
 
 \resumeProject
 {\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
 	% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
 	{Apr 2024}
-	% {}
 \resumeItemListStart
-\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Go over gRPC, using concurrent nodes in distributed network
+\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
 	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
 \resumeItemListEnd
+
+% \resumeProject
+% {RC Car}
+% {Aug 2023 - Dec 2023}
+% \resumeItemListStart
+% \item Soldered and developed a remote controlled RC car using CircuitPython on a microcontroller with collision avoidance, path following and convoying
+% \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 \section{\textbf{Technical Skills}}
  \resumeHeadingSkillStart
  \resumeSubItem{Languages| }
-    {Python $\cdot$ 
-	Go $\cdot$ 
-	C/C++ $\cdot$  
-	Javascript $\cdot$
+    {
+	C $\cdot$  
+	C++ $\cdot$  
+	TypeScript $\cdot$ 
+	React $\cdot$ 
+	Golang $\cdot$ 
+	Python $\cdot$ 
+	Java $\cdot$ 
+	% HTML/CSS $\cdot$
+	% Javascript $\cdot$
 	Rust $\cdot$ 
-	% Typescript $\cdot$ 
-	% Java $\cdot$ 
 	% Spring $\cdot$ 
 	% Next.js $\cdot$ 
 	Bash $\cdot$
 	SQL % $\cdot$ 
-	% React.js $\cdot$ 
 	}
 
 	\resumeSubItem{Infrastructure| }
-    {AWS EC2 $\cdot$ 
+    {
+	Linux Kernel $\cdot$ 
+	AWS EC2 $\cdot$ 
 	CI/CD $\cdot$ 
-	Linux $\cdot$ 
 	% GitHub $\cdot$ 
 	% Figma $\cdot$  
 	% nmap $\cdot$ 
 	% Apple Codesigning $\cdot$ 
 	% macOS API $\cdot$ 
 	% WireShark $\cdot$ 
-	Docker $\cdot$ 
-	REST $\cdot$ 
-	gRPC % $\cdot$ 
+	Docker  $\cdot$ 
+	% Kubernetes % $\cdot$ 
+	% REST $\cdot$ 
+	% gRPC $\cdot$ 
 	% TCP/IP
 	}
 
 	\resumeSubItem{Interests| }
 	{Distributed Systems $\cdot$ 
 	Cybersecurity $\cdot$ 
+	% Problem Solving $\cdot$
 	% SDLC $\cdot$
 	Operating Systems % $\cdot$ 
 	% Cryptocurrencies $\cdot$ 
@@ -366,18 +398,6 @@
 
 \section{\textbf{Awards}}
 \resumeSubHeadingListStart
-
-% \resumeProject
-  % {Dean's List}
-  % {Reykjavik University}
-  % {Fall 2022 \& Fall 2023}
-  % {}
-
-% \resumeProject
-%   {Freshman grant}
-%   {Reykjavik University}
-%   {For Fall 2021}
-
 
 \resumeAward
   {Icelandic National Gymnasium Math Competition}
@@ -391,33 +411,5 @@
 
 
 \resumeSubHeadingListEnd
-
-%
-% \section{\textbf{References}}
-% \vspace{-0.2mm}
-% \small{
-% \begin{enumerate}[leftmargin=*,labelsep=2mm]
-% \item \textbf{Reference Person 1}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email1@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
-%
-% \item \textbf{Reference Person 2}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email2@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
-%
-% \item \textbf{Reference Person 3}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email3@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
-% \end{enumerate}
-% }
 
 \end{document}
