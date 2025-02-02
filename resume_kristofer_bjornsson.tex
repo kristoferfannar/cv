@@ -31,6 +31,7 @@
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome5}
+\usepackage{xfp} % for \baseSpace and float calculations
 
 % Color definitions
 \definecolor{darkblue}{RGB}{0,0,139}
@@ -77,71 +78,76 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
-% \titleformat{\section}{
-%   \vspace{-6pt}\scshape\raggedright\large
-% }{}{0em}{}[\color{black}\titlerule \vspace{-14pt}]
+
+% as this increases, the gaps should increase 
+\newcommand{\baseSpace}{3.14}
 
 \titleformat{\section}
-  {\vspace{-6pt}\scshape\raggedright\large}
+{\vspace{\fpeval{1.5 * \baseSpace}pt}\scshape\raggedright\large}
   {}{0em}
   {\sectiontitlerule}
   []
-\newcommand{\sectiontitlerule}[1]{#1 \hspace{0.5mm}\color{black}\titlerule \vspace{-18pt}}
+
+% overwrite default section spacing 
+\titlespacing{\section}{0pt}{0pt}{0pt}
+% \setlist[itemize]{topsep=0pt}
+\setlist[itemize]{nosep}
+
+\newcommand{\sectiontitlerule}[1]{#1 \hspace{0.5mm}\color{black}\titlerule \vspace{-2.5pt}}
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+	\textbf{#1}{\hspace{0.5mm}#2 \vspace{\fpeval{0 * \baseSpace} pt}}
   }
 }
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
+	\vspace{\fpeval{0 * \baseSpace} mm}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
     \end{tabular*}
-    \vspace{-2mm}
+	\vspace{\fpeval{0 * \baseSpace} mm}
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{3mm}
+	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
         \textit{\normalsize{#3}} &  \normalsize{#2}\\
     \end{tabular*}
-    \vspace{-2.5mm}
+	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
 
 \newcommand{\resumeProject}[2]{
-\vspace{3mm}
+	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\normalsize{#2}}
         % \normalsize{\textit{#2}} & \normalsize{#4}
     \end{tabular*}
-    \vspace{-2.5mm}
+	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
 
 \newcommand{\resumeAward}[2]{
-\vspace{3mm}
+	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\normalsize{#2}} \\
     \end{tabular*}
-    \vspace{-2mm}
+	\vspace{\fpeval{0.0 * \baseSpace} pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{\fpeval{0 * \baseSpace} pt}}
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{}
-\newcommand{\resumeHeadingSkillStart}{\vspace{4mm}\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=-0.6mm]\normalsize}
+\newcommand{\resumeHeadingSkillStart}{\vspace{\fpeval{1.7 * \baseSpace} pt}\begin{itemize}[leftmargin=*,itemsep=\fpeval{1.0 * \baseSpace} pt, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=\fpeval{0.8 * \baseSpace} pt]\normalsize}
 
 \newcommand{\resumeSubHeadingListEnd}{}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-\baselineskip}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{\fpeval{0 * \baseSpace} pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
@@ -156,7 +162,7 @@
 \newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
 
 
-\linespread{0.95}
+\linespread{1.00}
 
 \begin{document}
 \headerfontiii
@@ -165,7 +171,7 @@
 \begin{center}
     {\Huge\textbf{Kristofer Fannar Bjornsson}}
 \end{center}
-\vspace{-7mm}
+\vspace{\fpeval{0 * \baseSpace} pt}
 
 \begin{center}
     \small{
@@ -176,7 +182,7 @@
     \socialicon{\faGithub} \href{https://github.com/kristoferfannar}{kristoferfannar}
     }
 \end{center}
-\vspace{-4mm}
+\vspace{\fpeval{0 * \baseSpace} pt}
 % \begin{center}
 %     \small{Your City, Your State - Your ZIP, Your Country}
 % \end{center}
@@ -251,16 +257,16 @@
 
     \resumeItemListEnd
 	
-  \resumeSubheading
-  {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
-    {Software Engineer Intern}{May 2022 - Jan 2023}
-    \resumeItemListStart
-	  \item Created a web service using Java's Spring framework to automatically collect and persist data into a local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
-
-	  % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
-
-	  \item Prototyped a method for estimating fish origin probabilities based off of catch date, vessel location and amount fished
-	\resumeItemListEnd
+ %  \resumeSubheading
+ %  {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
+ %    {Software Engineer Intern}{May 2022 - Jan 2023}
+ %    \resumeItemListStart
+	%   \item Created a web service using Java's Spring framework to automatically collect and persist data into a local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
+	%
+	%   % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
+	%
+	%   \item Prototyped a method for estimating fish origin probabilities based off of catch date, vessel location and amount fished
+	% \resumeItemListEnd
 
 
 % \resumeSubheading
@@ -291,21 +297,21 @@
 	\item Developed GPU accelerated database using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
 \resumeItemListEnd
 
-\resumeProject
-{Shadow Page Table | Linux Kernel}
-{Nov 2024}
-\resumeItemListStart
-\item Added Linux Kernel system call for tracking \& monitoring specified process's virtual memory area ranges
-\item Monitored page table accesses in kernel, continuously updating a custom shared "shadow" page table, writable by kernel and readable from user space through \emph{remap\_pfn\_range}
-\resumeItemListEnd
-
-\resumeProject
-{Oven Scheduler | Linux Kernel}
-{Oct 2024}
-\resumeItemListStart
-	\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on multi-core on selected benchmarks 
-	\item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
-\resumeItemListEnd
+% \resumeProject
+% {Shadow Page Table | Linux Kernel}
+% {Nov 2024}
+% \resumeItemListStart
+% \item Added Linux Kernel system call for tracking \& monitoring specified process's virtual memory area ranges
+% \item Monitored page table accesses in kernel, continuously updating a custom shared "shadow" page table, writable by kernel and readable from user space through \emph{remap\_pfn\_range}
+% \resumeItemListEnd
+%
+% \resumeProject
+% {Oven Scheduler | Linux Kernel}
+% {Oct 2024}
+% \resumeItemListStart
+% 	\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on multi-core on selected benchmarks 
+% 	\item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
+% \resumeItemListEnd
 
 \resumeProject
 {\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{Research Project w/ Keystrike  \footnotesize{\faFile}}}
@@ -317,24 +323,24 @@
 \item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python \& Golang with ECDSA signatures
 \resumeItemListEnd
 
-\resumeProject 
-{\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
-  % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
-  {Mar 2024 - Jun 2024}
-\resumeItemListStart
-	\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
-	\item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
-	\item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
-\resumeItemListEnd
+% \resumeProject 
+% {\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
+%   % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
+%   {Mar 2024 - Jun 2024}
+% \resumeItemListStart
+% 	\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
+% 	\item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
+% 	\item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
+% \resumeItemListEnd
 
-\resumeProject
-{\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
-	% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
-	{Apr 2024}
-\resumeItemListStart
-\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
-	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
-\resumeItemListEnd
+% \resumeProject
+% {\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
+% 	% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
+% 	{Apr 2024}
+% \resumeItemListStart
+% \item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
+% 	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
+% \resumeItemListEnd
 
 % \resumeProject
 % {RC Car}
