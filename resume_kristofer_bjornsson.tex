@@ -30,7 +30,7 @@
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome5}
-\usepackage{xfp} % for \baseSpace and float calculations
+\usepackage{xfp} % for float calculations
 
 % Color definitions
 \definecolor{darkblue}{RGB}{0,0,139}
@@ -282,24 +282,24 @@
 \resumeSubHeadingListStart
 
 \resumeProject
-{\href{https://github.com/kristo-og-logi/premking}{PremKing \footnotesize{\faGithub}}}
+{\href{https://github.com/kristo-og-logi/premking}{PremKing}}
 % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
-{Jul 2023 - Current}
+{\href{https://github.com/kristo-og-logi/premking}{github.com/logi-og-kristo/premking \footnotesize{\faGithub}}}
 \resumeItemListStart
-\item Launched open source full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native \& Golang backend on AWS, connected to PostgresSQL database
+\item Launched open source full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native \& Golang backend deployed on AWS, connected to PostgresSQL database
 % \item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
 \resumeItemListEnd
 
-% \resumeProject
-% {\href{https://github.com/lmkdatabase/lmkdb}{lmkDB \footnotesize{\faGithub}}}
-%   {Nov 2024 - Dec 2024}
-% \resumeItemListStart
-% 	\item Developed GPU accelerated database using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
-% \resumeItemListEnd
+\resumeProject
+{\href{https://github.com/lmkdatabase/lmkdb}{lmkDB}}
+{\href{https://github.com/lmkdatabase/lmkdb}{github.com/lmkdatabase \footnotesize{\faGithub}}}
+\resumeItemListStart
+	\item Developed GPU accelerated SQL-like database from scratch using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
+\resumeItemListEnd
 
 % \resumeProject
 % {Shadow Page Table | Linux Kernel}
-% {Nov 2024}
+% {}
 % \resumeItemListStart
 % \item Added Linux Kernel system call for tracking \& monitoring specified process's virtual memory area ranges
 % \item Monitored page table accesses in kernel, continuously updating a custom shared "shadow" page table, writable by kernel and readable from user space through \emph{remap\_pfn\_range}
@@ -307,44 +307,44 @@
 
 \resumeProject
 {Oven Scheduler | Linux Kernel}
-{Oct 2024}
+{}
 \resumeItemListStart
-\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on multi-core on selected benchmarks
+\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on 4 cores on selected benchmarks
 % \item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
 \resumeItemListEnd
 
-% \resumeProject 
-% {\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender \footnotesize{\faGithub}}}
-% % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
-% {Mar 2024 - Jun 2024}
-% \resumeItemListStart
-% \item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
-% \item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
+\resumeProject 
+{\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender}}
+% {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
+{\href{https://github.com/DesktopDefender/DesktopDefender}{github.com/desktopdefender \footnotesize{\faGithub}}}
+\resumeItemListStart
+\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
+\item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
 % \item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
-% 	\resumeItemListEnd
+\resumeItemListEnd
 
 \resumeProject
-{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{Research Project w/ Keystrike  \footnotesize{\faFile}}}
+{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{Research Project w/ Keystrike}}
 % {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
-{Oct 2023 - May 2024}
+{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{report \footnotesize{\faFile}}}
 \resumeItemListStart
 % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
 \item Evaluated existing \& developed novel string comparison algorithms to determine whether a sequence of typed inputs could produce an edited string, reaching over $\ge 80\%$ confidence on average
-\item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python \& Golang with ECDSA signatures
+% \item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python \& Golang with ECDSA signatures
+\resumeItemListEnd
+
+\resumeProject
+{\href{https://github.com/lsig/raft}{Raft}}
+% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
+{\href{https://github.com/lsig/raft}{github.com/lsig/raft \footnotesize{\faGithub}}}
+\resumeItemListStart
+\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
+\item Consistently replicated logs between 10+ servers bouncing over $100.000$ concurrent messages on a network
 \resumeItemListEnd
 
 % \resumeProject
-% {\href{https://github.com/lsig/raft}{Raft \footnotesize{\faGithub}}}
-% 	% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
-% 	{Apr 2024}
-% \resumeItemListStart
-% \item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
-% 	\item Consistently replicated logs between tens of servers bouncing over $100.000$ concurrent messages on a LAN
-% \resumeItemListEnd
-
-% \resumeProject
 % {RC Car}
-% {Aug 2023 - Dec 2023}
+% {}
 % \resumeItemListStart
 % \item Soldered and developed a remote controlled RC car using CircuitPython on a microcontroller with collision avoidance, path following and convoying
 % \resumeItemListEnd
@@ -378,27 +378,29 @@
 	CI/CD $\cdot$
 	% GitHub $\cdot$ 
 	% Figma $\cdot$  
-	% nmap $\cdot$ 
+	% Jest $\cdot$
 	% Apple Codesigning $\cdot$ 
 	% macOS API $\cdot$ 
 	% WireShark $\cdot$ 
-	Docker  $\cdot$
+	Docker % $\cdot$
 	% Kubernetes % $\cdot$ 
 	% REST $\cdot$ 
 	% gRPC $\cdot$ 
 	% TCP/IP
 }
 
-\resumeSubItem{Interests| }
-{Distributed Systems $\cdot$
-	Cybersecurity $\cdot$
-	% Problem Solving $\cdot$
-	% SDLC $\cdot$
-	Operating Systems % $\cdot$ 
-	% Cryptocurrencies $\cdot$ 
-	% Competitive Programming $\cdot$ 
-	% CTFs
-}
+% \resumeSubItem{Interests| }
+% {
+% 	Distributed Systems $\cdot$
+% 	Cybersecurity $\cdot$
+% 	% Open Source $\cdot$ 
+% 	% Problem Solving $\cdot$
+% 	% SDLC $\cdot$
+% 	Operating Systems % $\cdot$ 
+% 	% Cryptocurrencies $\cdot$ 
+% 	% Competitive Programming $\cdot$ 
+% 	% CTFs
+% }
 
 \resumeHeadingSkillEnd
 
