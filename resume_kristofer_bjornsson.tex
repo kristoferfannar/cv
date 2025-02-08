@@ -79,7 +79,7 @@
 
 
 % as this increases, the gaps should increase 
-\newcommand{\baseSpace}{4.0}
+\newcommand{\baseSpace}{4.1}
 
 \titleformat{\section}
 {\vspace{\fpeval{1.5 * \baseSpace}pt}\scshape\raggedright\large}
@@ -92,7 +92,8 @@
 % \setlist[itemize]{topsep=0pt}
 \setlist[itemize]{nosep}
 
-\newcommand{\sectiontitlerule}[1]{#1 \hspace{0.5mm}\color{black}\titlerule \vspace{-2.5pt}}
+% \newcommand{\sectiontitlerule}[1]{#1 \hspace{0.5mm}\color{black}\titlerule \vspace{-2.5pt}}
+\newcommand{\sectiontitlerule}[1]{#1 \vspace{-3.6mm} \newline \color{black}\titlerule \vspace{-2mm}}
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
@@ -201,20 +202,35 @@
 
 \resumeSubheading
 {Columbia University}{New York, NY}
-{MS Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
+{MSc Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
 \resumeItemListStart
-\item GPA: 3.92 $\cdot$ ICPC 2024 GNY Regionals participant
+% \item GPA: 3.92 $\cdot$ ICPC 2024 GNY Regionals participant
+\item ICPC 2024 GNY Regionals participant
+\newline
+\begin{tabular}{l}
+	\textit{Coursework} | 
+	Operating Systems $\cdot$ 
+	% Design Using C++ $\cdot$
+	Cryptography $\cdot$ 
+	Programming \& Problem Solving
+\end{tabular}
 \resumeItemListEnd
 
 \resumeSubheading
 {Reykjavik University}{Reykjavik, IS}
-{BS Software Engineering}{Aug 2021 - May 2024}
+{BSc Software Engineering}{Aug 2021 - May 2024}
 \resumeItemListStart
 \item First Class with Distinction $\cdot$ Dean's list F22 \& F23 $\cdot$ Freshman grant F21
 % \item Teaching Assistant for Algorithms F23 $\cdot$ Web Programming S24 $\cdot$ Computer Networks F24
-\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
-\end{tabular*}
+\begin{tabular}{l}
+	\textit{Coursework} | 
+	Concurrent \& Distributed Programming $\cdot$ 
+	Cybersecurity $\cdot$ 
+	Computer Networks
+\end{tabular}
+% \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+% 	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
+% \end{tabular*}
 \resumeItemListEnd
 
 \section{\textbf{Professional Experience}}
