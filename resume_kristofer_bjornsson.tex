@@ -79,7 +79,7 @@
 
 
 % as this increases, the gaps should increase 
-\newcommand{\baseSpace}{4.1}
+\newcommand{\baseSpace}{4.0}
 
 \titleformat{\section}
 {\vspace{\fpeval{1.5 * \baseSpace}pt}\scshape\raggedright\large}
@@ -124,6 +124,15 @@
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\normalsize{#2}}
         % \normalsize{\textit{#2}} & \normalsize{#4}
+    \end{tabular*}
+	\vspace{\fpeval{0.5 * \baseSpace} pt}
+}
+
+\newcommand{\resumeResearch}[4]{
+	\vspace{\fpeval{1.5 * \baseSpace} pt}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
+        \textit{\normalsize{#3}} &  \normalsize{#2}\\
     \end{tabular*}
 	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
@@ -202,16 +211,20 @@
 
 \resumeSubheading
 {Columbia University}{New York, NY}
-{MSc Computer Science | Software Systems}{Aug 2024 - Dec 2025 (Expected)}
+{MSc Computer Science | Software Systems track}{Aug 2024 - Dec 2025 (Expected)}
 \resumeItemListStart
+% \item GPA: 3.92 $\cdot$ ICPC 2024 GNY Regionals participant
+% \item  GPA: 3.92 $\cdot$ Blockchain@Columbia member % $\cdot$ ICPC 2024 GNY Regionals participant
 % \item GPA: 3.92 $\cdot$ ICPC 2024 GNY Regionals participant
 \item ICPC 2024 GNY Regionals participant
 \newline
 \begin{tabular}{l}
-	\textit{Coursework} | 
+	\textit{Selected Coursework} | 
 	Operating Systems $\cdot$ 
+	% Programming Languages \& Translators
 	% Design Using C++ $\cdot$
 	Cryptography $\cdot$ 
+	% Competitive Programming $\cdot$
 	Programming \& Problem Solving
 \end{tabular}
 \resumeItemListEnd
@@ -223,9 +236,10 @@
 \item First Class with Distinction $\cdot$ Dean's list F22 \& F23 $\cdot$ Freshman grant F21
 % \item Teaching Assistant for Algorithms F23 $\cdot$ Web Programming S24 $\cdot$ Computer Networks F24
 \begin{tabular}{l}
-	\textit{Coursework} | 
-	Concurrent \& Distributed Programming $\cdot$ 
+	\textit{Selected Coursework} | 
+	% Mobile App Development $\cdot$
 	Cybersecurity $\cdot$ 
+	Concurrent \& Distributed Programming $\cdot$ 
 	Computer Networks
 \end{tabular}
 % \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -242,42 +256,45 @@
 \resumeItemListStart
 \item Migrated security desktop driver from Windows to macOS in Rust, now adopted by 1/3rd of company's userbase
 
+\item Performed security assessment for \& built same driver functionality into secure Chrome Extension using pure HTML, Javascript and Tailwind generated CSS - dependency free
+
+\item Wrote proof of concept for and resolved internal "zero-day" vulnerability, preventing injected inputs from being validated
 % \item Created custom Rust bindings for communicating with macOS API, prototyping in Swift \& Objective C
 % \item Main developer through entire SDLC, from non macOS compiling Windows coupled codebase to external beta testing
 
 % \item Built using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations
 
-\item Wrote proof of concept for and resolved zero-day vulnerability, preventing injected inputs from being validated
-
-\item Implemented automatic app building, signing \& deployment pipelines for seamless distribution through GitHub Actions
+\item Setup extensive test suite running on automatic app building \& deployment pipelines for seamless distribution through GitHub Actions
 \resumeItemListEnd
 
 \resumeSubheading
 {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
 {Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Dec 2024}
 \resumeItemListStart
-\item Held TA sessions, mentoring 60+ students through solving problem sets over 3 semesters
-\item Evaluated student submissions \& provided feedback to Professors on assignments and exams
+\item Held TA sessions, mentoring 60+ students through solving problem sets over 3 semesters, teaching time complexity, searching, sorting etc. in Java (Algorithms), and HTML, CSS \& Javascript (Web Programming)
+% \item Evaluated student submissions \& provided feedback to Professors on assignments and exams
+\item Created bash script to validate HTML structure for code submissions, saving > 400 minutes of grading per assignment
 \resumeItemListEnd
 
 
 \resumeSubheading
 {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
-{Software Engineer Intern}{May 2023 - Jan 2024}
+% {Software Engineer Intern}{May 2023 - Jan 2024}
+{Security Engineer Intern}{May 2023 - Jan 2024}
 \resumeItemListStart
-\item Led a team to design and implement a full-stack prototype with React, Express \& PostgreSQL through Docker
-\item Leveraged multi-role functionality with in-house authentication service using JWT tokens 
-\item Conducted interviews with 5+ prospective clients to streamline BCP onboarding process from 2 weeks to 1 hour
+\item Collaborated in a team of engineers to design and implement a full-stack web app for Incident Response handling for Business Continuity Planning with React, Express \& PostgreSQL through Docker
+% \item Implemented secure in-house authentication service enabling multi-role privileges using JWT tokens 
+% \item Conducted interviews with 5+ prospective clients to streamline Business Continuity Planning onboarding process from 2 weeks to 1 hour, creating an automatic incident response plan and customizable playbooks
 \resumeItemListEnd
 
-\resumeSubheading
-{\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
-{Software Engineer Intern}{May 2022 - Jan 2023}
-\resumeItemListStart
-\item Created web service using Java's Spring framework to collect and persist >10.000 daily events into local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
-% \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
-\item Prototyped a method for estimating fish origin probabilities based off of catch date, vessel location and amount fished
-\resumeItemListEnd
+% \resumeSubheading
+% {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
+% {Software Engineer Intern}{May 2022 - Jan 2023}
+% \resumeItemListStart
+% \item Created web service using Java's Spring framework to collect and persist >10.000 daily events into local Oracle SQL server from fish passing through graders in Icelandic fisheries, used to improve fishing quota estimates
+% % \item Programmed API to receive data through multiple grader protocols, creating private endpoints for fetching data
+% \item Prototyped a method for estimating fish origin probabilities based off of catch date, vessel location and amount fished
+% \resumeItemListEnd
 
 
 % \resumeSubheading
@@ -285,6 +302,34 @@
 % {Secondary | Physics}{Aug 2018 - May 2021}
 % \resumeItemListStart
 % \item GPA: 9.2/10
+% \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{\textbf{Research Experience}}
+\resumeSubHeadingListStart
+
+\resumeResearch
+{Columbia University}{New York, NY}
+{Research Assistant | Software Systems Lab}{Jan 2025 - Present}
+\resumeItemListStart
+\item Investigated optimizing software systems for satellites using uBPF, a userspace runtime for eBPF
+% \item Added support for JIT compilation on uBPF virtual machine for RISC-V architecture
+\item Added floating point arithmetic support on uBPF virtual machine in C, introducing new eBPF VM instructions generated by LLVM and modifying the uBPF VM to process them
+\resumeItemListEnd
+
+% \resumeResearch
+% {Reykjavik University \& Keystrike}
+% {Reykjavik, IS}
+% {\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{Thesis Researcher}}
+% {Oct 2023 - May 2024}
+% % {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
+% % {\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{report \footnotesize{\faFile}}}
+% \resumeItemListStart
+% % \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
+% \item Developed method for continuous authentication \& message verification over web protocols 
+% \item Evaluated existing \& developed novel string comparison algorithms to determine whether a sequence of typed inputs could produce an edited string, reaching over $\ge 80\%$ confidence on average
+% \item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python with ECDSA signatures, wrapped into a FastAPI server
 % \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -297,8 +342,8 @@
 % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
 {\href{https://github.com/kristo-og-logi/premking}{github.com/logi-og-kristo/premking \footnotesize{\faGithub}}}
 \resumeItemListStart
-\item Launched open source full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native \& Golang backend deployed on AWS, connected to PostgresSQL database
-% \item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
+\item Launched open source full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing $\approx$ 100 monthly users, using React Native, Golang backend REST API deployed on AWS, connected to PostgresSQL database, with push notifications
+\item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
 \resumeItemListEnd
 
 \resumeProject
@@ -316,42 +361,48 @@
 % \item Monitored page table accesses in kernel, continuously updating a custom shared "shadow" page table, writable by kernel and readable from user space through \emph{remap\_pfn\_range}
 % \resumeItemListEnd
 
+
 \resumeProject
 {Oven Scheduler | Linux Kernel}
 {}
 \resumeItemListStart
 \item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on 4 cores on selected benchmarks
-% \item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
+	% \item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
 \resumeItemListEnd
 
-\resumeProject 
-{\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender}}
-% {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
-{\href{https://github.com/DesktopDefender/DesktopDefender}{github.com/desktopdefender \footnotesize{\faGithub}}}
-\resumeItemListStart
-\item Built a network security desktop application in Tauri for monitoring devices \& traffic on home networks
-\item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
-% \item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
-\resumeItemListEnd
+% \resumeProject
+% {Fly | Programming Language}
+% {}
+% \resumeItemListStart
+% \item Implemented functional programming language using OCaml, building a compiler frontend to LLVM IR
+% \resumeItemListEnd
 
-\resumeProject
-{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{Research Project w/ Keystrike}}
-% {Skills: String comparison $\cdot$ Algorithmic research \& evaluation $\cdot$ Go $\cdot$ Python $\cdot$ Protobuf $\cdot$ Cryptography}
-{\href{https://skemman.is/bitstream/1946/47651/1/Reykjavik_University_Keystrike_Final_Report.pdf}{report \footnotesize{\faFile}}}
-\resumeItemListStart
-% \item Researched ways to expand Keystrike's main product, then known as the Sanctum Guard, to the web
-\item Evaluated existing \& developed novel string comparison algorithms to determine whether a sequence of typed inputs could produce an edited string, reaching over $\ge 80\%$ confidence on average
-% \item Rewrote Keystrike's proprietary cryptographic attestation protocol in Python \& Golang with ECDSA signatures
-\resumeItemListEnd
+% \resumeProject
+% {Ladebug | Debugger}
+% {}
+% \resumeItemListStart
+% \item Built a debugger for ELF executables in Linux with \texttt{ptrace}, implementing breakpoints with INT3 and register inspection 
+% \resumeItemListEnd
 
-\resumeProject
-{\href{https://github.com/lsig/raft}{Raft}}
-% {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
-{\href{https://github.com/lsig/raft}{github.com/lsig/raft \footnotesize{\faGithub}}}
-\resumeItemListStart
-\item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
-\item Consistently replicated logs between 10+ servers bouncing over $100.000$ concurrent messages on a network
-\resumeItemListEnd
+% \resumeProject
+% {\href{https://github.com/lsig/raft}{Raft}}
+% % {Skills: Concurrent \& Distributed Programming $\cdot$ Go $\cdot$ Mutual Exclusion $\cdot$ Channels $\cdot$ Consensus $\cdot$ Protobuf}
+% {\href{https://github.com/lsig/raft}{github.com/lsig/raft \footnotesize{\faGithub}}}
+% \resumeItemListStart
+% \item Recreated \href{https://raft.github.io/}{Raft Consensus algorithm} from scratch in Golang over gRPC, using concurrent nodes in distributed network
+% \item Consistently replicated logs between 10+ servers bouncing over $100.000$ concurrent messages on a network
+% \resumeItemListEnd
+
+
+% \resumeProject 
+% {\href{https://github.com/DesktopDefender/DesktopDefender}{Desktop Defender}}
+% % {Skills: \href{https://tauri.app}{Tauri}, Rust, Nextjs, LAN, Router, mDNS, Cyber Security, Encryption, Password cracking}
+% {\href{https://github.com/DesktopDefender/DesktopDefender}{github.com/desktopdefender \footnotesize{\faGithub}}}
+% \resumeItemListStart
+% \item Built a network security desktop application in Tauri, combining NextJS with Tailwind \& TypeScript with Rust, for monitoring devices \& traffic on home networks
+% \item Brute forced admin credentials on home network's router by scraping unauthorized endpoints on admin portal
+% % \item Found network devices through ARP, built multithreaded Rust port scanner, scanning router \& devices for open ports
+% \resumeItemListEnd
 
 % \resumeProject
 % {RC Car}
@@ -366,33 +417,38 @@
 \resumeHeadingSkillStart
 \resumeSubItem{Languages| }
 {
-	C $\cdot$
-	C++ $\cdot$
-	TypeScript $\cdot$
-	React $\cdot$
-	Golang $\cdot$
-	Python $\cdot$
-	Java $\cdot$
-	% HTML/CSS $\cdot$
+	% Java (Spring) $\cdot$ 
+	% Golang $\cdot$
+	% (HTML $\cdot$ CSS $\cdot$ JS) $\cdot$
+	C $\cdot$ C++ $\cdot$
+	% Typescript $\cdot$
 	% Javascript $\cdot$
-	Rust $\cdot$
-	% Spring $\cdot$ 
-	% Next.js $\cdot$ 
-	Bash $\cdot$
-	SQL % $\cdot$ 
+	Node $\cdot$
+	Python $\cdot$
+	React $\cdot$ % NextJS $\cdot$
+	Rust  $\cdot$
+	PostgreSQL % $\cdot$ 
+	% Java $\cdot$
+	% Bash $\cdot$
 }
 
-\resumeSubItem{Infrastructure| }
+\resumeSubItem{Other| }
 {
+	% App Development $\cdot$
 	Linux Kernel $\cdot$
-	AWS EC2 $\cdot$
+	AWS $\cdot$
+	% LLVM $\cdot$
 	CI/CD $\cdot$
+	eBPF $\cdot$
+	% Tailwind $\cdot$ 
+	% FastAPI $\cdot$
 	% GitHub $\cdot$ 
 	% Figma $\cdot$  
 	% Jest $\cdot$
 	% Apple Codesigning $\cdot$ 
 	% macOS API $\cdot$ 
 	% WireShark $\cdot$ 
+	Git $\cdot$ 
 	Docker % $\cdot$
 	% Kubernetes % $\cdot$ 
 	% REST $\cdot$ 
@@ -415,20 +471,19 @@
 
 \resumeHeadingSkillEnd
 
-\section{\textbf{Awards}}
-\resumeSubHeadingListStart
-
-\resumeAward
-{Icelandic National Gymnasium Math Competition}
-% {Icelandic Mathematical Society (ice. Íslenska Stærðfræðifélagið)}
-{2nd 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{black}{\faIcon{globe}}}] | \textit{16th - 17th 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{black}{\faIcon{globe}}}]}}
-
-\resumeAward
-{Icelandic National Compulsory School Math Competition}
-% {(ice. Stærðfræðikeppni Grunnskólanema)}
-{\textit{4th 2016 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2016/03/17/Staerdfraedikeppni-grunnskolanna-a-elsta-stigi/}{[\faGlobe]}}| \textit{4th 2017} | \textit{4th 2018 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2018/04/10/Urslit-staerdfraedikeppni-grunnskolanna-2018/}{[\faGlobe]}}}
-
-
-\resumeSubHeadingListEnd
+% \section{\textbf{Awards}}
+% \resumeSubHeadingListStart
+%
+% \resumeAward
+% {Icelandic National Gymnasium (11th - 13th grade) Math Competition}
+% % {Icelandic Mathematical Society (ice. Íslenska Stærðfræðifélagið)}
+% {2nd 2018 {}[\href{https://www.stae.is/stak/keppnin2018}{\textcolor{black}{\faIcon{globe}}}] | \textit{16th - 17th 2019 {}[\href{https://www.stae.is/stak/keppnin2019}{\textcolor{black}{\faIcon{globe}}}]}}
+%
+% \resumeAward
+% {Icelandic National Compulsory School (1st - 10th grade) Math Competition}
+% % {(ice. Stærðfræðikeppni Grunnskólanema)}
+% {\textit{4th 2016 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2016/03/17/Staerdfraedikeppni-grunnskolanna-a-elsta-stigi/}{[\faGlobe]}}| \textit{4th 2017} | \textit{4th 2018 \href{http://www.lagafellsskoli.is/forsida/frettir/frett/2018/04/10/Urslit-staerdfraedikeppni-grunnskolanna-2018/}{[\faGlobe]}}}
+%
+% \resumeSubHeadingListEnd
 
 \end{document}
