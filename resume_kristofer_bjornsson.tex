@@ -79,10 +79,34 @@
 
 
 % as this increases, the gaps should increase 
-\newcommand{\baseSpace}{4.0}
+\newcommand{\baseSpace}{7.4}
+
+\makeatletter
+\newcommand\fontHeaderInfo{%
+  \@setfontsize\fontHeaderInfo{9.5pt}{11.0pt} % font size, baseline skip
+}
+\makeatother
+
+\makeatletter
+\newcommand\fontSection{%
+  \@setfontsize\fontSection{13.0pt}{14.0pt} % font size, baseline skip
+}
+\makeatother
+
+\makeatletter
+\newcommand\fontTitle{%
+  \@setfontsize\fontTitle{11.5pt}{14.0pt} % font size, baseline skip
+}
+\makeatother
+
+\makeatletter
+\newcommand\fontText{%
+  \@setfontsize\fontText{11.0pt}{12.5pt} % font size, baseline skip
+}
+\makeatother
 
 \titleformat{\section}
-{\vspace{\fpeval{1.5 * \baseSpace}pt}\scshape\raggedright\large}
+{\vspace{\fpeval{1.5 * \baseSpace}pt}\scshape\raggedright\fontSection}
   {}{0em}
   {\sectiontitlerule}
   []
@@ -98,7 +122,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item{
-	\textbf{#1}{\hspace{0.5mm}#2 \vspace{\fpeval{0 * \baseSpace} pt}}
+	\fontText{\textbf{#1}{\hspace{0.5mm}#2 \vspace{\fpeval{0 * \baseSpace} pt}}}
   }
 }
 
@@ -113,8 +137,8 @@
 \newcommand{\resumeSubheading}[4]{
 	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
-        \textit{\normalsize{#3}} &  \normalsize{#2}\\
+		\textbf{\fontTitle{#1}} & \fontText{#4} \\
+        \fontText{#3} &  \fontText{#2}\\
     \end{tabular*}
 	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
@@ -122,8 +146,7 @@
 \newcommand{\resumeProject}[2]{
 	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\normalsize{#2}}
-        % \normalsize{\textit{#2}} & \normalsize{#4}
+		\textbf{\fontTitle{#1}} & \fontText{#2}
     \end{tabular*}
 	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
@@ -131,8 +154,8 @@
 \newcommand{\resumeResearch}[4]{
 	\vspace{\fpeval{1.5 * \baseSpace} pt}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{\normalsize{#1}} & \textit{\normalsize{#4}} \\
-        \textit{\normalsize{#3}} &  \normalsize{#2}\\
+		\textbf{\fontTitle{#1}} & \fontText{#4} \\
+        \fontText{#3} &  \fontText{#2}\\
     \end{tabular*}
 	\vspace{\fpeval{0.5 * \baseSpace} pt}
 }
@@ -152,7 +175,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeHeadingSkillStart}{\vspace{\fpeval{1.7 * \baseSpace} pt}\begin{itemize}[leftmargin=*,itemsep=\fpeval{1.0 * \baseSpace} pt, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=\fpeval{0.8 * \baseSpace} pt]\normalsize}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=\fpeval{0.8 * \baseSpace} pt]\fontText}
 
 \newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{\fpeval{0 * \baseSpace} pt}}
@@ -183,7 +206,7 @@
 \vspace{-20pt}
 
 \begin{center}
-	\small{
+	\fontHeaderInfo{
 		(646) 229 0496 |
 		\href{mailto:kristofer.bjornsson@columbia.edu}{kristofer.bjornsson@columbia.edu} |
 		\href{https://kristoferfannar.com}{kristoferfannar.com} |
@@ -212,40 +235,46 @@
 \resumeSubheading
 {Columbia University}{New York, NY}
 {MSc Computer Science | Software Systems track}{Aug 2024 - Dec 2025 (Expected)}
-\resumeItemListStart
+% \resumeItemListStart
 % \item 4.0 GPA $\cdot$ ICPC 2024 GNY Regionals participant
 % \item 4.0 GPA $\cdot$ Blockchain@Columbia member % $\cdot$ ICPC 2024 GNY Regionals participant
 % \item 4.0 GPA $\cdot$ ICPC 2024 GNY Regionals participant
-\item ICPC 2024 GNY Regionals participant
-\newline
+% \item ICPC 2024 GNY Regionals participant
+% \newline
+
+\fontText
+\vspace{-0.5mm}
 \begin{tabular}{l}
-	\textit{Selected Coursework} | 
+	Coursework | 
 	Operating Systems $\cdot$ 
 	% Programming Languages \& Translators
-	% Design Using C++ $\cdot$
-	Cryptography $\cdot$ 
+	Design Using C++ % $\cdot$
+	% Cryptography $\cdot$ 
 	% Competitive Programming $\cdot$
-	Programming \& Problem Solving
+	% Programming \& Problem Solving
 \end{tabular}
-\resumeItemListEnd
+% \resumeItemListEnd
 
 \resumeSubheading
 {Reykjavik University}{Reykjavik, IS}
 {BSc Software Engineering}{Aug 2021 - May 2024}
-\resumeItemListStart
-\item First Class with Distinction $\cdot$ Dean's list F22 \& F23 $\cdot$ Freshman grant F21
+% \resumeItemListStart
+% \item First Class with Distinction $\cdot$ Dean's list F22 \& F23 % $\cdot$ Freshman grant F21
 % \item Teaching Assistant for Algorithms F23 $\cdot$ Web Programming S24 $\cdot$ Computer Networks F24
+
+\fontText
+\vspace{-0.5mm}
 \begin{tabular}{l}
-	\textit{Selected Coursework} | 
+	Coursework | 
 	% Mobile App Development $\cdot$
-	Cybersecurity $\cdot$ 
-	Concurrent \& Distributed Programming $\cdot$ 
+	% Cybersecurity $\cdot$ 
+	Distributed Systems $\cdot$ 
 	Computer Networks
 \end{tabular}
 % \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
 % 	\textit{Exchange semester @ University of Copenhagen} &  \textit{Spring 2023}
 % \end{tabular*}
-\resumeItemListEnd
+% \resumeItemListEnd
 
 \section{\textbf{Work Experience}}
 \resumeSubHeadingListStart
@@ -254,8 +283,8 @@
 {\href{https://bloomberg.com}{Bloomberg}}{New York, NY}
 {Security Engineer Intern}{June 2025 - Aug 2025}
 \resumeItemListStart
-\item Built a CLI tool in Python to automate exploit testing on >2.000 CVE vulnerabilities on >50.000 Bloomberg machines
-\item Helped prove exploitability on over 700 critical \& high vulnerabilites in Bloomberg environment
+\item Built a Python service which automated exploit testing on >2.000 CVE vulnerabilities on >50.000 Bloomberg applications
+\item Demonstrated exploitability on over 700 critical \& high vulnerabilites in Bloomberg environment
 % \item Parsed exploits for >2.000 CVEs from metasploit, finding vulnerabilites within the entire Bloomberg environment, totalling >50.000 services
 % \item Researched Linux Kernel vulnerabilites, working around memory corrupting exploits to produce crash-safe proof of concepts, safe for testing on production systems
 \resumeItemListEnd
@@ -264,7 +293,7 @@
 {\href{https://keystrike.com}{Keystrike (Startup)}}{Reykjavik, IS}
 {Software Engineer Intern}{May 2024 - Jan 2025}
 \resumeItemListStart
-\item Migrated security desktop driver from Windows to macOS in Rust, now adopted by 1/3rd of company's userbase
+\item Wrote, bundled and signed security desktop driver for macOS from scratch in Rust, now adopted by 1/3rd of company's userbase
 
 % \item Performed security assessment for \& built same driver functionality into secure Chrome Extension using pure HTML, Javascript and Tailwind generated CSS - dependency free
 
@@ -274,12 +303,12 @@
 
 % \item Built using high security standards for storing secrets in Apple Keychain, preventing injected inputs \& signing input attestations
 
-\item Setup extensive test suite running on automatic app building \& deployment pipelines for seamless distribution through GitHub Actions
+% \item Setup extensive test suite running on automatic app building \& deployment pipelines for seamless distribution through GitHub Actions
 \resumeItemListEnd
 
 \resumeSubheading
 {\href{https://www.ru.is}{Reykjavik University}}{Reykjavik, IS}
-{Teaching Assistant | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}{Aug 2023 - Dec 2024}
+{Teaching Assistant}{Aug 2023 - May 2024} % | Algorithms $\cdot$ Web Programming $\cdot$ Computer Networks}
 \resumeItemListStart
 \item Held TA sessions, mentoring 60+ students through solving problem sets over 3 semesters, teaching time complexity, searching, sorting etc. in Java (Algorithms), and HTML, CSS \& Javascript (Web Programming)
 % \item Evaluated student submissions \& provided feedback to Professors on assignments and exams
@@ -287,15 +316,15 @@
 \resumeItemListEnd
 
 
-\resumeSubheading
-{\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
-% {Software Engineer Intern}{May 2023 - Jan 2024}
-{Security Engineer Intern}{May 2023 - Jan 2024}
-\resumeItemListStart
-\item Collaborated in a team of engineers to design and implement a full-stack web app for Incident Response handling for Business Continuity Planning with React, Express \& PostgreSQL through Docker
-% \item Implemented secure in-house authentication service enabling multi-role privileges using JWT tokens 
-% \item Conducted interviews with 5+ prospective clients to streamline Business Continuity Planning onboarding process from 2 weeks to 1 hour, creating an automatic incident response plan and customizable playbooks
-\resumeItemListEnd
+% \resumeSubheading
+% {\href{https://www.syndis.is}{Syndis}}{Reykjavik, IS}
+% % {Software Engineer Intern}{May 2023 - Jan 2024}
+% {Security Engineer Intern}{May 2023 - Jan 2024}
+% \resumeItemListStart
+% \item Collaborated in a team of engineers to design and implement a full-stack web app for Incident Response handling for Business Continuity Planning with React, Express \& PostgreSQL through Docker
+% % \item Implemented secure in-house authentication service enabling multi-role privileges using JWT tokens 
+% % \item Conducted interviews with 5+ prospective clients to streamline Business Continuity Planning onboarding process from 2 weeks to 1 hour, creating an automatic incident response plan and customizable playbooks
+% \resumeItemListEnd
 
 % \resumeSubheading
 % {\href{https://hafogvatn.is/en}{Marine \& Freshwater Research Institute}}{Reykjavik, IS}
@@ -347,21 +376,21 @@
 \section{\textbf{Projects}}
 \resumeSubHeadingListStart
 
-\resumeProject
-{\href{https://github.com/kristoferfannar/premking}{PremKing}}
-% {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
-{\href{https://github.com/kristoferfannar/premking}{github.com/kristoferfannar/premking \footnotesize{\faGithub}}}
-\resumeItemListStart
-\item Launched full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing >100 weekly users, using React Native, Golang backend REST API deployed on AWS, connected to PostgresSQL database, with push notifications and OAuth
-\item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
-\resumeItemListEnd
-
 % \resumeProject
-% {\href{https://github.com/lmkdatabase/lmkdb}{lmkDB}}
-% {\href{https://github.com/lmkdatabase/lmkdb}{github.com/lmkdatabase \footnotesize{\faGithub}}}
+% {\href{https://github.com/kristoferfannar/premking}{PremKing}}
+% % {Skills: React Native $\cdot$ Go $\cdot$ AWS EC2 $\cdot$ OAuth $\cdot$ Postgres $\cdot$ App Store \& Testflight $\cdot$ Lets Encrypt $\cdot$ Nginx}
+% {\href{https://github.com/kristoferfannar/premking}{github.com/kristoferfannar/premking \footnotesize{\faGithub}}}
 % \resumeItemListStart
-% 	\item Developed GPU accelerated SQL-like database from scratch using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
+% \item Launched full-stack mobile app on \href{https://apps.apple.com/is/app/premking/id6476774713}{the App Store}, managing >100 weekly users, using React Native, Golang backend REST API deployed on AWS, connected to PostgresSQL database, with push notifications and OAuth
+% \item Utilized cronjobs to fetch data from external API, updating user scores \& calculating positions on new responses
 % \resumeItemListEnd
+
+\resumeProject
+{\href{https://github.com/lmkdatabase/lmkdb}{lmkDB - GPU accelerated database}}
+{\href{https://github.com/lmkdatabase/lmkdb}{github.com/lmkdatabase \small{\faGithub}}}
+\resumeItemListStart
+	\item Developed GPU accelerated SQL-like database from scratch using modern C++ and CUDA, calculating JOIN operations on 10.000.000+ rows $\approx$ 10x faster than on non-GPU machines
+\resumeItemListEnd
 
 % \resumeProject
 % {Shadow Page Table | Linux Kernel}
@@ -372,13 +401,13 @@
 % \resumeItemListEnd
 
 
-\resumeProject
-{Oven Scheduler | Linux Kernel}
-{}
-\resumeItemListStart
-\item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on 4 cores on selected benchmarks
-	% \item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
-\resumeItemListEnd
+% \resumeProject
+% {Oven Scheduler | Linux Kernel}
+% {}
+% \resumeItemListStart
+% \item Created new default process scheduler, called "Oven", with C in the Linux Kernel, beating CFS (current default scheduler) by $\approx$ 17\% on single core and $\approx$ 5\% on 4 cores on selected benchmarks
+% 	% \item Performed benchmarks on modified Linux Kernel using eBPF through VMWare virtual machine
+% \resumeItemListEnd
 
 % \resumeProject
 % {Fly | Programming Language}
@@ -430,15 +459,15 @@
 	% Java (Spring) $\cdot$ 
 	% (HTML $\cdot$ CSS $\cdot$ JS) $\cdot$
 	% Typescript $\cdot$
+	% Javascript $\cdot$
+	C $\cdot$ C++ $\cdot$
 	Python $\cdot$
-	Javascript $\cdot$
-	Node $\cdot$
+	% Java $\cdot$
 	% Golang $\cdot$
-	% C $\cdot$ C++ $\cdot$
-	React $\cdot$ % NextJS $\cdot$
+	% Node $\cdot$
+	% React $\cdot$ % NextJS $\cdot$
 	Rust  $\cdot$
 	PostgreSQL % $\cdot$ 
-	% Java $\cdot$
 	% Bash $\cdot$
 }
 
